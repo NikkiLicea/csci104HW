@@ -1,0 +1,16 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/work/hw-nlicea/hw2/hw2_tests/shell_tests/shell_tests.cpp
+gtest/gtest.h
+-
+fstream
+-
+cstring
+-
+

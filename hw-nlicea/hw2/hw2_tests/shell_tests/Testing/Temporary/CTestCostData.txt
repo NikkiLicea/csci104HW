@@ -1,0 +1,7 @@
+SearchShell.Query1 0 0
+SearchShell.Query2 0 0
+SearchShell.Query3 0 0
+---
+SearchShell.Query1
+SearchShell.Query2
+SearchShell.Query3

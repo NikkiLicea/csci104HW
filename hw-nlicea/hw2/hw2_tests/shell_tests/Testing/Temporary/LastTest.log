@@ -1,0 +1,131 @@
+Start testing: Feb 12 07:06 UTC
+----------------------------------------------------------
+1/3 Testing: SearchShell.Query1
+1/3 Test: SearchShell.Query1
+Command: "/work/hw-nlicea/hw2/hw2_tests/shell_tests/shell_tests" "--gtest_filter=SearchShell.Query1"
+Directory: /work/hw-nlicea/hw2/hw2_tests/shell_tests
+"SearchShell.Query1" start time: Feb 12 07:06 UTC
+Output:
+----------------------------------------------------------
+Running main() from /build/googletest-j5yxiC/googletest-1.10.0/googletest/src/gtest_main.cc
+Note: Google Test filter = SearchShell.Query1
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from SearchShell
+[ RUN      ] SearchShell.Query1
+Current working directory: /work/hw-nlicea/hw2/hw2_tests/shell_tests
+Student hw directory: /work/hw-nlicea/hw2
+free(): double free detected in tcache 2
+Aborted
+/work/hw-nlicea/hw2/hw2_tests/shell_tests/shell_tests.cpp:31: Failure
+Expected equality of these values:
+  returnCode
+    Which is: 34304
+  0
+/work/hw-nlicea/hw2/search-shell ./test-small/index.in ./test-small/shell-query1.in ./shell-query1.out exit status is 34304 (expected 0)
+Attempting to compare ./shell-query1.out to ./test-small/shell-query1.in
+[  FAILED  ] SearchShell.Query1 (23 ms)
+[----------] 1 test from SearchShell (23 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (23 ms total)
+[  PASSED  ] 0 tests.
+[  FAILED  ] 1 test, listed below:
+[  FAILED  ] SearchShell.Query1
+
+ 1 FAILED TEST
+<end of output>
+Test time =   0.04 sec
+----------------------------------------------------------
+Test Failed.
+"SearchShell.Query1" end time: Feb 12 07:06 UTC
+"SearchShell.Query1" time elapsed: 00:00:00
+----------------------------------------------------------
+
+2/3 Testing: SearchShell.Query2
+2/3 Test: SearchShell.Query2
+Command: "/work/hw-nlicea/hw2/hw2_tests/shell_tests/shell_tests" "--gtest_filter=SearchShell.Query2"
+Directory: /work/hw-nlicea/hw2/hw2_tests/shell_tests
+"SearchShell.Query2" start time: Feb 12 07:06 UTC
+Output:
+----------------------------------------------------------
+Running main() from /build/googletest-j5yxiC/googletest-1.10.0/googletest/src/gtest_main.cc
+Note: Google Test filter = SearchShell.Query2
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from SearchShell
+[ RUN      ] SearchShell.Query2
+Current working directory: /work/hw-nlicea/hw2/hw2_tests/shell_tests
+Student hw directory: /work/hw-nlicea/hw2
+Segmentation fault
+/work/hw-nlicea/hw2/hw2_tests/shell_tests/shell_tests.cpp:31: Failure
+Expected equality of these values:
+  returnCode
+    Which is: 35584
+  0
+/work/hw-nlicea/hw2/search-shell ./test-small/index.in ./test-small/shell-query2.in ./shell-query2.out exit status is 35584 (expected 0)
+Attempting to compare ./shell-query2.out to ./test-small/shell-query2.in
+/work/hw-nlicea/hw2/hw2_tests/shell_tests/shell_tests.cpp:64: Failure
+Value of: res
+  Actual: false (output files do not match)
+Expected: true
+[  FAILED  ] SearchShell.Query2 (28 ms)
+[----------] 1 test from SearchShell (28 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (28 ms total)
+[  PASSED  ] 0 tests.
+[  FAILED  ] 1 test, listed below:
+[  FAILED  ] SearchShell.Query2
+
+ 1 FAILED TEST
+<end of output>
+Test time =   0.04 sec
+----------------------------------------------------------
+Test Failed.
+"SearchShell.Query2" end time: Feb 12 07:06 UTC
+"SearchShell.Query2" time elapsed: 00:00:00
+----------------------------------------------------------
+
+3/3 Testing: SearchShell.Query3
+3/3 Test: SearchShell.Query3
+Command: "/work/hw-nlicea/hw2/hw2_tests/shell_tests/shell_tests" "--gtest_filter=SearchShell.Query3"
+Directory: /work/hw-nlicea/hw2/hw2_tests/shell_tests
+"SearchShell.Query3" start time: Feb 12 07:06 UTC
+Output:
+----------------------------------------------------------
+Running main() from /build/googletest-j5yxiC/googletest-1.10.0/googletest/src/gtest_main.cc
+Note: Google Test filter = SearchShell.Query3
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from SearchShell
+[ RUN      ] SearchShell.Query3
+Current working directory: /work/hw-nlicea/hw2/hw2_tests/shell_tests
+Student hw directory: /work/hw-nlicea/hw2
+Segmentation fault
+/work/hw-nlicea/hw2/hw2_tests/shell_tests/shell_tests.cpp:31: Failure
+Expected equality of these values:
+  returnCode
+    Which is: 35584
+  0
+/work/hw-nlicea/hw2/search-shell ./test-small/index.in ./test-small/shell-query3.in ./shell-query3.out exit status is 35584 (expected 0)
+Attempting to compare ./shell-query3.out to ./test-small/shell-query3.in
+[  FAILED  ] SearchShell.Query3 (29 ms)
+[----------] 1 test from SearchShell (29 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (29 ms total)
+[  PASSED  ] 0 tests.
+[  FAILED  ] 1 test, listed below:
+[  FAILED  ] SearchShell.Query3
+
+ 1 FAILED TEST
+<end of output>
+Test time =   0.04 sec
+----------------------------------------------------------
+Test Failed.
+"SearchShell.Query3" end time: Feb 12 07:06 UTC
+"SearchShell.Query3" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: Feb 12 07:06 UTC

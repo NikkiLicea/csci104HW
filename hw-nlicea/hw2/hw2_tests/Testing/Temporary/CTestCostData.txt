@@ -1,0 +1,32 @@
+SearchEng.ParserRegistration 2 1.94542
+SearchEng.ReadPageMultipleTimes 2 1.36094
+SearchEng.ANDCombiner 2 1.46735
+SearchEng.ORCombiner 2 1.2673
+SearchEng.DiffCombiner 2 1.35852
+SearchEng.RetrievePage 2 1.57198
+SearchEng.LinkCornerCases 2 1.09898
+SearchEng.SameLink 2 1.93534
+SearchEng.DisplayPage 2 1.3884
+Parsers.MdParserSpecialStart 2 1.42214
+Parsers.MdParserSpecialEnd 2 1.11829
+Parsers.MdParserSpecialMiddle 2 1.14745
+Parsers.MdParserTextFull 2 1.02932
+Parsers.MdParserLinksSepStart 2 1.07714
+Parsers.MdParserLinksSepEnd 2 1.14297
+Parsers.MdParserLinksSepMiddle 2 1.02307
+Parsers.MdParserLinksFull 2 1.04066
+Parsers.MDWriteupCornerCases 2 1.06136
+Parsers.MDAnchorAnchor 2 1.08287
+Combiners.ANDCombiner 2 1.46766
+Combiners.ORCombiner 2 1.05685
+Combiners.DiffCombiner 2 1.32809
+Cmdhandlers.AndHandler 2 1.30997
+Cmdhandlers.OrHandler 2 1.11257
+Cmdhandlers.DiffHandler 2 1.12445
+Cmdhandlers.IncomingHandler 2 1.12329
+Cmdhandlers.OutgoingHandler 2 1.21718
+SearchShell.Query1 2 0.0999553
+SearchShell.Query2 0 0
+SearchShell.Query3 2 0.0894772
+---
+SearchShell.Query2

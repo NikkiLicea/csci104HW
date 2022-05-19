@@ -1,0 +1,6 @@
+hw4_tests/
+.vscode/
+equal-paths-test
+equal-paths-test.cpp
+bst-test
+bst-test.cpp

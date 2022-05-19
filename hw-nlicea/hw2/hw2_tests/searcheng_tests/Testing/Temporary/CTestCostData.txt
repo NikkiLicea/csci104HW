@@ -1,0 +1,10 @@
+SearchEng.ParserRegistration 10 0.101595
+SearchEng.ReadPageMultipleTimes 4 0.240545
+SearchEng.ANDCombiner 7 0.141012
+SearchEng.ORCombiner 10 0.0985759
+SearchEng.DiffCombiner 6 0.169644
+SearchEng.RetrievePage 4 0.254746
+SearchEng.LinkCornerCases 10 0.0974586
+SearchEng.SameLink 5 0.296119
+SearchEng.DisplayPage 5 0.184549
+---

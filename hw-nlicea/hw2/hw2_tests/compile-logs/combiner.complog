@@ -1,0 +1,13 @@
+[  8%] Building CXX object combiner_tests/CMakeFiles/hw2_combiner.dir/work/hw-nlicea/hw2/cmdhandler.cpp.o
+[ 16%] Building CXX object combiner_tests/CMakeFiles/hw2_combiner.dir/work/hw-nlicea/hw2/combiners.cpp.o
+[ 25%] Building CXX object combiner_tests/CMakeFiles/hw2_combiner.dir/work/hw-nlicea/hw2/handler.cpp.o
+[ 33%] Building CXX object combiner_tests/CMakeFiles/hw2_combiner.dir/work/hw-nlicea/hw2/md_parser.cpp.o
+[ 41%] Building CXX object combiner_tests/CMakeFiles/hw2_combiner.dir/work/hw-nlicea/hw2/mdparser-tests.cpp.o
+[ 50%] Building CXX object combiner_tests/CMakeFiles/hw2_combiner.dir/work/hw-nlicea/hw2/search-shell.cpp.o
+[ 58%] Building CXX object combiner_tests/CMakeFiles/hw2_combiner.dir/work/hw-nlicea/hw2/searcheng.cpp.o
+[ 66%] Building CXX object combiner_tests/CMakeFiles/hw2_combiner.dir/work/hw-nlicea/hw2/searchui.cpp.o
+[ 75%] Building CXX object combiner_tests/CMakeFiles/hw2_combiner.dir/work/hw-nlicea/hw2/txt_parser.cpp.o
+[ 83%] Building CXX object combiner_tests/CMakeFiles/hw2_combiner.dir/work/hw-nlicea/hw2/util.cpp.o
+[ 91%] Building CXX object combiner_tests/CMakeFiles/hw2_combiner.dir/work/hw-nlicea/hw2/webpage.cpp.o
+[100%] Linking CXX static library libhw2_combiner.a
+[100%] Built target hw2_combiner

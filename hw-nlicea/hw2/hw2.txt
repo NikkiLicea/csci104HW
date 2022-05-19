@@ -1,0 +1,55 @@
+Problem 1 - More git Questions
+Part A: After Part A the README.md now exists in a folder named SampleRepo on the home directory
+Part B: fun_problem.txt now exists and the README.md now has an additional line saying "Markdown is easy" at the end
+Part C: Both README.md and fun_problem.txt are now in my working directory on the Git staging area
+Part D: git commit adds both files to the local git repository. 
+README.md also has an additional line saying "Markdown is too easy" added to the end.
+fun_problem.txt also has an additional line saying "So far, so good" added to the end.
+Part E: The README.md is once again added to the staging area but now with its new changes.
+fun_problem.txt is now restored to its previous version before the additional line was added and it is now empty.
+Part F: 
+The README.md now has an additional line saying "Fancy git move" at the end of it. 
+
+
+Problem 2 - Makefiles
+Part A: TAB
+Part B: make clean will call "rm -f *.o *~ shape1 shape2 *~". This removed the .o files for shape1 and shape2.
+make shape1 will call "g++ -I$(IDIR) -std=c++11 -ggdb" on the entire dependency list then call the file lm 
+Part C: It ensures that a rule is not associated with a file
+Part D: 
+    Makefile.txt
+    Makefile
+    makefile
+
+
+Problem 3 - Linked List Recursion Tracing 
+
+
+Problem 4 - ADTs
+Question 1:
+A list of strings. 
+This is because text requires a string of some type. 
+However, as the recipe uses steps is important we should use a data type that prioritizes order. 
+A list will allow the user to access the elements in their suggested order and unlike a set, 
+you can have multiple of the same steps. Thus a list 
+
+Question 2: 
+A set of strings. 
+This is because text requires a string of some type.
+Furthermore as the goal is to ensure that identifications are reused then we need a data type that prioritizes unique keys. 
+    
+Question 3: 
+A map with a string key (player) and a string value (teams).
+This is because text for the team name and player names requires a string of some type. 
+Furthermore as the player names are unique, we need a data type that prioritizes unique values. Thus they can act as keys in a map.
+Once you search through the map O(logn) time you can find the value/team that the player/key is associated with.
+
+
+Question 4: 
+A map with a string key (file extension) and a value of a set of strings (possible programs).
+This is because text for the file extension and possible programs requires a string. 
+Furthermore if we make the file extension the key we can easily see all the relevant programs for that file type only.
+Also as the file extensions  are unique, we need a data type that prioritizes unique values.
+We can then have a set of possible programs as the order does not matter and we do not want to have duplicate programs.
+
+

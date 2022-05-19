@@ -1,0 +1,1653 @@
+Start testing: Feb 12 07:01 UTC
+----------------------------------------------------------
+1/9 Testing: SearchEng.ParserRegistration
+1/9 Test: SearchEng.ParserRegistration
+Command: "/usr/bin/valgrind" "--tool=memcheck" "--leak-check=yes" "--trace-children=no" "/work/hw-nlicea/hw2/hw2_tests/searcheng_tests/searcheng_tests" "--gtest_filter=SearchEng.ParserRegistration"
+Directory: /work/hw-nlicea/hw2/hw2_tests/searcheng_tests
+"SearchEng.ParserRegistration" start time: Feb 12 07:01 UTC
+Output:
+----------------------------------------------------------
+==4009== Memcheck, a memory error detector
+==4009== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==4009== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
+==4009== Command: /work/hw-nlicea/hw2/hw2_tests/searcheng_tests/searcheng_tests --gtest_filter=SearchEng.ParserRegistration
+==4009== 
+Running main() from /build/googletest-j5yxiC/googletest-1.10.0/googletest/src/gtest_main.cc
+Note: Google Test filter = SearchEng.ParserRegistration
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from SearchEng
+[ RUN      ] SearchEng.ParserRegistration
+==4009== Invalid read of size 8
+==4009==    at 0x130793: SearchEng::~SearchEng() (searcheng.cpp:34)
+==4009==    by 0x119426: SearchEng_ParserRegistration_Test::TestBody() (searcheng_tests.cpp:82)
+==4009==    by 0x166410: HandleSehExceptionsInMethodIfSupported<testing::Test, void> (gtest.cc:2433)
+==4009==    by 0x166410: void testing::internal::HandleExceptionsInMethodIfSupported<testing::Test, void>(testing::Test*, void (testing::Test::*)(), char const*) (gtest.cc:2469)
+==4009==    by 0x15AAB5: Run (gtest.cc:2508)
+==4009==    by 0x15AAB5: testing::Test::Run() (gtest.cc:2498)
+==4009==    by 0x15AC14: Run (gtest.cc:2684)
+==4009==    by 0x15AC14: testing::TestInfo::Run() (gtest.cc:2657)
+==4009==    by 0x15ACFC: Run (gtest.cc:2816)
+==4009==    by 0x15ACFC: testing::TestSuite::Run() (gtest.cc:2795)
+==4009==    by 0x15B21B: testing::internal::UnitTestImpl::RunAllTests() (gtest.cc:5338)
+==4009==    by 0x166980: HandleSehExceptionsInMethodIfSupported<testing::internal::UnitTestImpl, bool> (gtest.cc:2433)
+==4009==    by 0x166980: bool testing::internal::HandleExceptionsInMethodIfSupported<testing::internal::UnitTestImpl, bool>(testing::internal::UnitTestImpl*, bool (testing::internal::UnitTestImpl::*)(), char const*) (gtest.cc:2469)
+==4009==    by 0x15B44B: testing::UnitTest::Run() (gtest.cc:4925)
+==4009==    by 0x117DC3: main (in /work/hw-nlicea/hw2/hw2_tests/searcheng_tests/searcheng_tests)
+==4009==  Address 0x4ddf928 is 8 bytes before a block of size 176 alloc'd
+==4009==    at 0x483BE63: operator new(unsigned long) (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==4009==    by 0x130D48: SearchEng::read_page(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (searcheng.cpp:103)
+==4009==    by 0x11938C: SearchEng_ParserRegistration_Test::TestBody() (searcheng_tests.cpp:108)
+==4009==    by 0x166410: HandleSehExceptionsInMethodIfSupported<testing::Test, void> (gtest.cc:2433)
+==4009==    by 0x166410: void testing::internal::HandleExceptionsInMethodIfSupported<testing::Test, void>(testing::Test*, void (testing::Test::*)(), char const*) (gtest.cc:2469)
+==4009==    by 0x15AAB5: Run (gtest.cc:2508)
+==4009==    by 0x15AAB5: testing::Test::Run() (gtest.cc:2498)
+==4009==    by 0x15AC14: Run (gtest.cc:2684)
+==4009==    by 0x15AC14: testing::TestInfo::Run() (gtest.cc:2657)
+==4009==    by 0x15ACFC: Run (gtest.cc:2816)
+==4009==    by 0x15ACFC: testing::TestSuite::Run() (gtest.cc:2795)
+==4009==    by 0x15B21B: testing::internal::UnitTestImpl::RunAllTests() (gtest.cc:5338)
+==4009==    by 0x166980: HandleSehExceptionsInMethodIfSupported<testing::internal::UnitTestImpl, bool> (gtest.cc:2433)
+==4009==    by 0x166980: bool testing::internal::HandleExceptionsInMethodIfSupported<testing::internal::UnitTestImpl, bool>(testing::internal::UnitTestImpl*, bool (testing::internal::UnitTestImpl::*)(), char const*) (gtest.cc:2469)
+==4009==    by 0x15B44B: testing::UnitTest::Run() (gtest.cc:4925)
+==4009==    by 0x117DC3: main (in /work/hw-nlicea/hw2/hw2_tests/searcheng_tests/searcheng_tests)
+==4009== 
+==4009== Invalid free() / delete / delete[] / realloc()
+==4009==    at 0x483D74F: operator delete[](void*) (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==4009==    by 0x1307CF: SearchEng::~SearchEng() (searcheng.cpp:34)
+==4009==    by 0x119426: SearchEng_ParserRegistration_Test::TestBody() (searcheng_tests.cpp:82)
+==4009==    by 0x166410: HandleSehExceptionsInMethodIfSupported<testing::Test, void> (gtest.cc:2433)
+==4009==    by 0x166410: void testing::internal::HandleExceptionsInMethodIfSupported<testing::Test, void>(testing::Test*, void (testing::Test::*)(), char const*) (gtest.cc:2469)
+==4009==    by 0x15AAB5: Run (gtest.cc:2508)
+==4009==    by 0x15AAB5: testing::Test::Run() (gtest.cc:2498)
+==4009==    by 0x15AC14: Run (gtest.cc:2684)
+==4009==    by 0x15AC14: testing::TestInfo::Run() (gtest.cc:2657)
+==4009==    by 0x15ACFC: Run (gtest.cc:2816)
+==4009==    by 0x15ACFC: testing::TestSuite::Run() (gtest.cc:2795)
+==4009==    by 0x15B21B: testing::internal::UnitTestImpl::RunAllTests() (gtest.cc:5338)
+==4009==    by 0x166980: HandleSehExceptionsInMethodIfSupported<testing::internal::UnitTestImpl, bool> (gtest.cc:2433)
+==4009==    by 0x166980: bool testing::internal::HandleExceptionsInMethodIfSupported<testing::internal::UnitTestImpl, bool>(testing::internal::UnitTestImpl*, bool (testing::internal::UnitTestImpl::*)(), char const*) (gtest.cc:2469)
+==4009==    by 0x15B44B: testing::UnitTest::Run() (gtest.cc:4925)
+==4009==    by 0x117DC3: main (in /work/hw-nlicea/hw2/hw2_tests/searcheng_tests/searcheng_tests)
+==4009==  Address 0x4ddf928 is 8 bytes before a block of size 176 alloc'd
+==4009==    at 0x483BE63: operator new(unsigned long) (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==4009==    by 0x130D48: SearchEng::read_page(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (searcheng.cpp:103)
+==4009==    by 0x11938C: SearchEng_ParserRegistration_Test::TestBody() (searcheng_tests.cpp:108)
+==4009==    by 0x166410: HandleSehExceptionsInMethodIfSupported<testing::Test, void> (gtest.cc:2433)
+==4009==    by 0x166410: void testing::internal::HandleExceptionsInMethodIfSupported<testing::Test, void>(testing::Test*, void (testing::Test::*)(), char const*) (gtest.cc:2469)
+==4009==    by 0x15AAB5: Run (gtest.cc:2508)
+==4009==    by 0x15AAB5: testing::Test::Run() (gtest.cc:2498)
+==4009==    by 0x15AC14: Run (gtest.cc:2684)
+==4009==    by 0x15AC14: testing::TestInfo::Run() (gtest.cc:2657)
+==4009==    by 0x15ACFC: Run (gtest.cc:2816)
+==4009==    by 0x15ACFC: testing::TestSuite::Run() (gtest.cc:2795)
+==4009==    by 0x15B21B: testing::internal::UnitTestImpl::RunAllTests() (gtest.cc:5338)
+==4009==    by 0x166980: HandleSehExceptionsInMethodIfSupported<testing::internal::UnitTestImpl, bool> (gtest.cc:2433)
+==4009==    by 0x166980: bool testing::internal::HandleExceptionsInMethodIfSupported<testing::internal::UnitTestImpl, bool>(testing::internal::UnitTestImpl*, bool (testing::internal::UnitTestImpl::*)(), char const*) (gtest.cc:2469)
+==4009==    by 0x15B44B: testing::UnitTest::Run() (gtest.cc:4925)
+==4009==    by 0x117DC3: main (in /work/hw-nlicea/hw2/hw2_tests/searcheng_tests/searcheng_tests)
+==4009== 
+[       OK ] SearchEng.ParserRegistration (132 ms)
+[----------] 1 test from SearchEng (137 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (155 ms total)
+[  PASSED  ] 1 test.
+==4009== 
+==4009== HEAP SUMMARY:
+==4009==     in use at exit: 449 bytes in 6 blocks
+==4009==   total heap usage: 296 allocs, 292 frees, 157,151 bytes allocated
+==4009== 
+==4009== 8 bytes in 1 blocks are definitely lost in loss record 1 of 6
+==4009==    at 0x483BE63: operator new(unsigned long) (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==4009==    by 0x118DE8: SearchEng_ParserRegistration_Test::TestBody() (searcheng_tests.cpp:90)
+==4009==    by 0x166410: HandleSehExceptionsInMethodIfSupported<testing::Test, void> (gtest.cc:2433)
+==4009==    by 0x166410: void testing::internal::HandleExceptionsInMethodIfSupported<testing::Test, void>(testing::Test*, void (testing::Test::*)(), char const*) (gtest.cc:2469)
+==4009==    by 0x15AAB5: Run (gtest.cc:2508)
+==4009==    by 0x15AAB5: testing::Test::Run() (gtest.cc:2498)
+==4009==    by 0x15AC14: Run (gtest.cc:2684)
+==4009==    by 0x15AC14: testing::TestInfo::Run() (gtest.cc:2657)
+==4009==    by 0x15ACFC: Run (gtest.cc:2816)
+==4009==    by 0x15ACFC: testing::TestSuite::Run() (gtest.cc:2795)
+==4009==    by 0x15B21B: testing::internal::UnitTestImpl::RunAllTests() (gtest.cc:5338)
+==4009==    by 0x166980: HandleSehExceptionsInMethodIfSupported<testing::internal::UnitTestImpl, bool> (gtest.cc:2433)
+==4009==    by 0x166980: bool testing::internal::HandleExceptionsInMethodIfSupported<testing::internal::UnitTestImpl, bool>(testing::internal::UnitTestImpl*, bool (testing::internal::UnitTestImpl::*)(), char const*) (gtest.cc:2469)
+==4009==    by 0x15B44B: testing::UnitTest::Run() (gtest.cc:4925)
+==4009==    by 0x117DC3: main (in /work/hw-nlicea/hw2/hw2_tests/searcheng_tests/searcheng_tests)
+==4009== 
+==4009== 8 bytes in 1 blocks are definitely lost in loss record 2 of 6
+==4009==    at 0x483BE63: operator new(unsigned long) (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==4009==    by 0x1192C4: SearchEng_ParserRegistration_Test::TestBody() (searcheng_tests.cpp:105)
+==4009==    by 0x166410: HandleSehExceptionsInMethodIfSupported<testing::Test, void> (gtest.cc:2433)
+==4009==    by 0x166410: void testing::internal::HandleExceptionsInMethodIfSupported<testing::Test, void>(testing::Test*, void (testing::Test::*)(), char const*) (gtest.cc:2469)
+==4009==    by 0x15AAB5: Run (gtest.cc:2508)
+==4009==    by 0x15AAB5: testing::Test::Run() (gtest.cc:2498)
+==4009==    by 0x15AC14: Run (gtest.cc:2684)
+==4009==    by 0x15AC14: testing::TestInfo::Run() (gtest.cc:2657)
+==4009==    by 0x15ACFC: Run (gtest.cc:2816)
+==4009==    by 0x15ACFC: testing::TestSuite::Run() (gtest.cc:2795)
+==4009==    by 0x15B21B: testing::internal::UnitTestImpl::RunAllTests() (gtest.cc:5338)
+==4009==    by 0x166980: HandleSehExceptionsInMethodIfSupported<testing::internal::UnitTestImpl, bool> (gtest.cc:2433)
+==4009==    by 0x166980: bool testing::internal::HandleExceptionsInMethodIfSupported<testing::internal::UnitTestImpl, bool>(testing::internal::UnitTestImpl*, bool (testing::internal::UnitTestImpl::*)(), char const*) (gtest.cc:2469)
+==4009==    by 0x15B44B: testing::UnitTest::Run() (gtest.cc:4925)
+==4009==    by 0x117DC3: main (in /work/hw-nlicea/hw2/hw2_tests/searcheng_tests/searcheng_tests)
+==4009== 
+==4009== 193 (176 direct, 17 indirect) bytes in 1 blocks are definitely lost in loss record 5 of 6
+==4009==    at 0x483BE63: operator new(unsigned long) (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==4009==    by 0x130D48: SearchEng::read_page(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (searcheng.cpp:103)
+==4009==    by 0x11938C: SearchEng_ParserRegistration_Test::TestBody() (searcheng_tests.cpp:108)
+==4009==    by 0x166410: HandleSehExceptionsInMethodIfSupported<testing::Test, void> (gtest.cc:2433)
+==4009==    by 0x166410: void testing::internal::HandleExceptionsInMethodIfSupported<testing::Test, void>(testing::Test*, void (testing::Test::*)(), char const*) (gtest.cc:2469)
+==4009==    by 0x15AAB5: Run (gtest.cc:2508)
+==4009==    by 0x15AAB5: testing::Test::Run() (gtest.cc:2498)
+==4009==    by 0x15AC14: Run (gtest.cc:2684)
+==4009==    by 0x15AC14: testing::TestInfo::Run() (gtest.cc:2657)
+==4009==    by 0x15ACFC: Run (gtest.cc:2816)
+==4009==    by 0x15ACFC: testing::TestSuite::Run() (gtest.cc:2795)
+==4009==    by 0x15B21B: testing::internal::UnitTestImpl::RunAllTests() (gtest.cc:5338)
+==4009==    by 0x166980: HandleSehExceptionsInMethodIfSupported<testing::internal::UnitTestImpl, bool> (gtest.cc:2433)
+==4009==    by 0x166980: bool testing::internal::HandleExceptionsInMethodIfSupported<testing::internal::UnitTestImpl, bool>(testing::internal::UnitTestImpl*, bool (testing::internal::UnitTestImpl::*)(), char const*) (gtest.cc:2469)
+==4009==    by 0x15B44B: testing::UnitTest::Run() (gtest.cc:4925)
+==4009==    by 0x117DC3: main (in /work/hw-nlicea/hw2/hw2_tests/searcheng_tests/searcheng_tests)
+==4009== 
+==4009== 240 (176 direct, 64 indirect) bytes in 1 blocks are definitely lost in loss record 6 of 6
+==4009==    at 0x483BE63: operator new(unsigned long) (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==4009==    by 0x130D48: SearchEng::read_page(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (searcheng.cpp:103)
+==4009==    by 0x11906A: SearchEng_ParserRegistration_Test::TestBody() (searcheng_tests.cpp:94)
+==4009==    by 0x166410: HandleSehExceptionsInMethodIfSupported<testing::Test, void> (gtest.cc:2433)
+==4009==    by 0x166410: void testing::internal::HandleExceptionsInMethodIfSupported<testing::Test, void>(testing::Test*, void (testing::Test::*)(), char const*) (gtest.cc:2469)
+==4009==    by 0x15AAB5: Run (gtest.cc:2508)
+==4009==    by 0x15AAB5: testing::Test::Run() (gtest.cc:2498)
+==4009==    by 0x15AC14: Run (gtest.cc:2684)
+==4009==    by 0x15AC14: testing::TestInfo::Run() (gtest.cc:2657)
+==4009==    by 0x15ACFC: Run (gtest.cc:2816)
+==4009==    by 0x15ACFC: testing::TestSuite::Run() (gtest.cc:2795)
+==4009==    by 0x15B21B: testing::internal::UnitTestImpl::RunAllTests() (gtest.cc:5338)
+==4009==    by 0x166980: HandleSehExceptionsInMethodIfSupported<testing::internal::UnitTestImpl, bool> (gtest.cc:2433)
+==4009==    by 0x166980: bool testing::internal::HandleExceptionsInMethodIfSupported<testing::internal::UnitTestImpl, bool>(testing::internal::UnitTestImpl*, bool (testing::internal::UnitTestImpl::*)(), char const*) (gtest.cc:2469)
+==4009==    by 0x15B44B: testing::UnitTest::Run() (gtest.cc:4925)
+==4009==    by 0x117DC3: main (in /work/hw-nlicea/hw2/hw2_tests/searcheng_tests/searcheng_tests)
+==4009== 
+==4009== LEAK SUMMARY:
+==4009==    definitely lost: 368 bytes in 4 blocks
+==4009==    indirectly lost: 81 bytes in 2 blocks
+==4009==      possibly lost: 0 bytes in 0 blocks
+==4009==    still reachable: 0 bytes in 0 blocks
+==4009==         suppressed: 0 bytes in 0 blocks
+==4009== 
+==4009== For lists of detected and suppressed errors, rerun with: -s
+==4009== ERROR SUMMARY: 8 errors from 6 contexts (suppressed: 0 from 0)
+<end of output>
+Test time =   1.02 sec
+----------------------------------------------------------
+Test Passed.
+"SearchEng.ParserRegistration" end time: Feb 12 07:01 UTC
+"SearchEng.ParserRegistration" time elapsed: 00:00:01
+----------------------------------------------------------
+
+2/9 Testing: SearchEng.ReadPageMultipleTimes
+2/9 Test: SearchEng.ReadPageMultipleTimes
+Command: "/usr/bin/valgrind" "--tool=memcheck" "--leak-check=yes" "--trace-children=no" "/work/hw-nlicea/hw2/hw2_tests/searcheng_tests/searcheng_tests" "--gtest_filter=SearchEng.ReadPageMultipleTimes"
+Directory: /work/hw-nlicea/hw2/hw2_tests/searcheng_tests
+"SearchEng.ReadPageMultipleTimes" start time: Feb 12 07:01 UTC
+Output:
+----------------------------------------------------------
+==4010== Memcheck, a memory error detector
+==4010== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==4010== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
+==4010== Command: /work/hw-nlicea/hw2/hw2_tests/searcheng_tests/searcheng_tests --gtest_filter=SearchEng.ReadPageMultipleTimes
+==4010== 
+Running main() from /build/googletest-j5yxiC/googletest-1.10.0/googletest/src/gtest_main.cc
+Note: Google Test filter = SearchEng.ReadPageMultipleTimes
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from SearchEng
+[ RUN      ] SearchEng.ReadPageMultipleTimes
+==4010== Invalid read of size 8
+==4010==    at 0x130793: SearchEng::~SearchEng() (searcheng.cpp:34)
+==4010==    by 0x125973: std::default_delete<SearchEng>::operator()(SearchEng*) const (unique_ptr.h:81)
+==4010==    by 0x123CC3: std::unique_ptr<SearchEng, std::default_delete<SearchEng> >::~unique_ptr() (unique_ptr.h:292)
+==4010==    by 0x11A0F2: SearchEng_ReadPageMultipleTimes_Test::TestBody() (searcheng_tests.cpp:114)
+==4010==    by 0x166410: HandleSehExceptionsInMethodIfSupported<testing::Test, void> (gtest.cc:2433)
+==4010==    by 0x166410: void testing::internal::HandleExceptionsInMethodIfSupported<testing::Test, void>(testing::Test*, void (testing::Test::*)(), char const*) (gtest.cc:2469)
+==4010==    by 0x15AAB5: Run (gtest.cc:2508)
+==4010==    by 0x15AAB5: testing::Test::Run() (gtest.cc:2498)
+==4010==    by 0x15AC14: Run (gtest.cc:2684)
+==4010==    by 0x15AC14: testing::TestInfo::Run() (gtest.cc:2657)
+==4010==    by 0x15ACFC: Run (gtest.cc:2816)
+==4010==    by 0x15ACFC: testing::TestSuite::Run() (gtest.cc:2795)
+==4010==    by 0x15B21B: testing::internal::UnitTestImpl::RunAllTests() (gtest.cc:5338)
+==4010==    by 0x166980: HandleSehExceptionsInMethodIfSupported<testing::internal::UnitTestImpl, bool> (gtest.cc:2433)
+==4010==    by 0x166980: bool testing::internal::HandleExceptionsInMethodIfSupported<testing::internal::UnitTestImpl, bool>(testing::internal::UnitTestImpl*, bool (testing::internal::UnitTestImpl::*)(), char const*) (gtest.cc:2469)
+==4010==    by 0x15B44B: testing::UnitTest::Run() (gtest.cc:4925)
+==4010==    by 0x117DC3: main (in /work/hw-nlicea/hw2/hw2_tests/searcheng_tests/searcheng_tests)
+==4010==  Address 0x4ddae98 is 8 bytes before a block of size 176 alloc'd
+==4010==    at 0x483BE63: operator new(unsigned long) (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==4010==    by 0x130D48: SearchEng::read_page(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (searcheng.cpp:103)
+==4010==    by 0x11997F: SearchEng_ReadPageMultipleTimes_Test::TestBody() (searcheng_tests.cpp:119)
+==4010==    by 0x166410: HandleSehExceptionsInMethodIfSupported<testing::Test, void> (gtest.cc:2433)
+==4010==    by 0x166410: void testing::internal::HandleExceptionsInMethodIfSupported<testing::Test, void>(testing::Test*, void (testing::Test::*)(), char const*) (gtest.cc:2469)
+==4010==    by 0x15AAB5: Run (gtest.cc:2508)
+==4010==    by 0x15AAB5: testing::Test::Run() (gtest.cc:2498)
+==4010==    by 0x15AC14: Run (gtest.cc:2684)
+==4010==    by 0x15AC14: testing::TestInfo::Run() (gtest.cc:2657)
+==4010==    by 0x15ACFC: Run (gtest.cc:2816)
+==4010==    by 0x15ACFC: testing::TestSuite::Run() (gtest.cc:2795)
+==4010==    by 0x15B21B: testing::internal::UnitTestImpl::RunAllTests() (gtest.cc:5338)
+==4010==    by 0x166980: HandleSehExceptionsInMethodIfSupported<testing::internal::UnitTestImpl, bool> (gtest.cc:2433)
+==4010==    by 0x166980: bool testing::internal::HandleExceptionsInMethodIfSupported<testing::internal::UnitTestImpl, bool>(testing::internal::UnitTestImpl*, bool (testing::internal::UnitTestImpl::*)(), char const*) (gtest.cc:2469)
+==4010==    by 0x15B44B: testing::UnitTest::Run() (gtest.cc:4925)
+==4010==    by 0x117DC3: main (in /work/hw-nlicea/hw2/hw2_tests/searcheng_tests/searcheng_tests)
+==4010== 
+==4010== Invalid free() / delete / delete[] / realloc()
+==4010==    at 0x483D74F: operator delete[](void*) (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==4010==    by 0x1307CF: SearchEng::~SearchEng() (searcheng.cpp:34)
+==4010==    by 0x125973: std::default_delete<SearchEng>::operator()(SearchEng*) const (unique_ptr.h:81)
+==4010==    by 0x123CC3: std::unique_ptr<SearchEng, std::default_delete<SearchEng> >::~unique_ptr() (unique_ptr.h:292)
+==4010==    by 0x11A0F2: SearchEng_ReadPageMultipleTimes_Test::TestBody() (searcheng_tests.cpp:114)
+==4010==    by 0x166410: HandleSehExceptionsInMethodIfSupported<testing::Test, void> (gtest.cc:2433)
+==4010==    by 0x166410: void testing::internal::HandleExceptionsInMethodIfSupported<testing::Test, void>(testing::Test*, void (testing::Test::*)(), char const*) (gtest.cc:2469)
+==4010==    by 0x15AAB5: Run (gtest.cc:2508)
+==4010==    by 0x15AAB5: testing::Test::Run() (gtest.cc:2498)
+==4010==    by 0x15AC14: Run (gtest.cc:2684)
+==4010==    by 0x15AC14: testing::TestInfo::Run() (gtest.cc:2657)
+==4010==    by 0x15ACFC: Run (gtest.cc:2816)
+==4010==    by 0x15ACFC: testing::TestSuite::Run() (gtest.cc:2795)
+==4010==    by 0x15B21B: testing::internal::UnitTestImpl::RunAllTests() (gtest.cc:5338)
+==4010==    by 0x166980: HandleSehExceptionsInMethodIfSupported<testing::internal::UnitTestImpl, bool> (gtest.cc:2433)
+==4010==    by 0x166980: bool testing::internal::HandleExceptionsInMethodIfSupported<testing::internal::UnitTestImpl, bool>(testing::internal::UnitTestImpl*, bool (testing::internal::UnitTestImpl::*)(), char const*) (gtest.cc:2469)
+==4010==    by 0x15B44B: testing::UnitTest::Run() (gtest.cc:4925)
+==4010==  Address 0x4ddae98 is 8 bytes before a block of size 176 alloc'd
+==4010==    at 0x483BE63: operator new(unsigned long) (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==4010==    by 0x130D48: SearchEng::read_page(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (searcheng.cpp:103)
+==4010==    by 0x11997F: SearchEng_ReadPageMultipleTimes_Test::TestBody() (searcheng_tests.cpp:119)
+==4010==    by 0x166410: HandleSehExceptionsInMethodIfSupported<testing::Test, void> (gtest.cc:2433)
+==4010==    by 0x166410: void testing::internal::HandleExceptionsInMethodIfSupported<testing::Test, void>(testing::Test*, void (testing::Test::*)(), char const*) (gtest.cc:2469)
+==4010==    by 0x15AAB5: Run (gtest.cc:2508)
+==4010==    by 0x15AAB5: testing::Test::Run() (gtest.cc:2498)
+==4010==    by 0x15AC14: Run (gtest.cc:2684)
+==4010==    by 0x15AC14: testing::TestInfo::Run() (gtest.cc:2657)
+==4010==    by 0x15ACFC: Run (gtest.cc:2816)
+==4010==    by 0x15ACFC: testing::TestSuite::Run() (gtest.cc:2795)
+==4010==    by 0x15B21B: testing::internal::UnitTestImpl::RunAllTests() (gtest.cc:5338)
+==4010==    by 0x166980: HandleSehExceptionsInMethodIfSupported<testing::internal::UnitTestImpl, bool> (gtest.cc:2433)
+==4010==    by 0x166980: bool testing::internal::HandleExceptionsInMethodIfSupported<testing::internal::UnitTestImpl, bool>(testing::internal::UnitTestImpl*, bool (testing::internal::UnitTestImpl::*)(), char const*) (gtest.cc:2469)
+==4010==    by 0x15B44B: testing::UnitTest::Run() (gtest.cc:4925)
+==4010==    by 0x117DC3: main (in /work/hw-nlicea/hw2/hw2_tests/searcheng_tests/searcheng_tests)
+==4010== 
+[       OK ] SearchEng.ReadPageMultipleTimes (142 ms)
+[----------] 1 test from SearchEng (147 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (164 ms total)
+[  PASSED  ] 1 test.
+==4010== 
+==4010== HEAP SUMMARY:
+==4010==     in use at exit: 407 bytes in 7 blocks
+==4010==   total heap usage: 320 allocs, 314 frees, 150,159 bytes allocated
+==4010== 
+==4010== 8 bytes in 1 blocks are definitely lost in loss record 1 of 7
+==4010==    at 0x483BE63: operator new(unsigned long) (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==4010==    by 0x118426: searchEngFactory() (searcheng_tests.cpp:41)
+==4010==    by 0x1198C4: SearchEng_ReadPageMultipleTimes_Test::TestBody() (searcheng_tests.cpp:114)
+==4010==    by 0x166410: HandleSehExceptionsInMethodIfSupported<testing::Test, void> (gtest.cc:2433)
+==4010==    by 0x166410: void testing::internal::HandleExceptionsInMethodIfSupported<testing::Test, void>(testing::Test*, void (testing::Test::*)(), char const*) (gtest.cc:2469)
+==4010==    by 0x15AAB5: Run (gtest.cc:2508)
+==4010==    by 0x15AAB5: testing::Test::Run() (gtest.cc:2498)
+==4010==    by 0x15AC14: Run (gtest.cc:2684)
+==4010==    by 0x15AC14: testing::TestInfo::Run() (gtest.cc:2657)
+==4010==    by 0x15ACFC: Run (gtest.cc:2816)
+==4010==    by 0x15ACFC: testing::TestSuite::Run() (gtest.cc:2795)
+==4010==    by 0x15B21B: testing::internal::UnitTestImpl::RunAllTests() (gtest.cc:5338)
+==4010==    by 0x166980: HandleSehExceptionsInMethodIfSupported<testing::internal::UnitTestImpl, bool> (gtest.cc:2433)
+==4010==    by 0x166980: bool testing::internal::HandleExceptionsInMethodIfSupported<testing::internal::UnitTestImpl, bool>(testing::internal::UnitTestImpl*, bool (testing::internal::UnitTestImpl::*)(), char const*) (gtest.cc:2469)
+==4010==    by 0x15B44B: testing::UnitTest::Run() (gtest.cc:4925)
+==4010==    by 0x117DC3: main (in /work/hw-nlicea/hw2/hw2_tests/searcheng_tests/searcheng_tests)
+==4010== 
+==4010== 8 bytes in 1 blocks are definitely lost in loss record 2 of 7
+==4010==    at 0x483BE63: operator new(unsigned long) (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==4010==    by 0x118497: searchEngFactory() (searcheng_tests.cpp:42)
+==4010==    by 0x1198C4: SearchEng_ReadPageMultipleTimes_Test::TestBody() (searcheng_tests.cpp:114)
+==4010==    by 0x166410: HandleSehExceptionsInMethodIfSupported<testing::Test, void> (gtest.cc:2433)
+==4010==    by 0x166410: void testing::internal::HandleExceptionsInMethodIfSupported<testing::Test, void>(testing::Test*, void (testing::Test::*)(), char const*) (gtest.cc:2469)
+==4010==    by 0x15AAB5: Run (gtest.cc:2508)
+==4010==    by 0x15AAB5: testing::Test::Run() (gtest.cc:2498)
+==4010==    by 0x15AC14: Run (gtest.cc:2684)
+==4010==    by 0x15AC14: testing::TestInfo::Run() (gtest.cc:2657)
+==4010==    by 0x15ACFC: Run (gtest.cc:2816)
+==4010==    by 0x15ACFC: testing::TestSuite::Run() (gtest.cc:2795)
+==4010==    by 0x15B21B: testing::internal::UnitTestImpl::RunAllTests() (gtest.cc:5338)
+==4010==    by 0x166980: HandleSehExceptionsInMethodIfSupported<testing::internal::UnitTestImpl, bool> (gtest.cc:2433)
+==4010==    by 0x166980: bool testing::internal::HandleExceptionsInMethodIfSupported<testing::internal::UnitTestImpl, bool>(testing::internal::UnitTestImpl*, bool (testing::internal::UnitTestImpl::*)(), char const*) (gtest.cc:2469)
+==4010==    by 0x15B44B: testing::UnitTest::Run() (gtest.cc:4925)
+==4010==    by 0x117DC3: main (in /work/hw-nlicea/hw2/hw2_tests/searcheng_tests/searcheng_tests)
+==4010== 
+==4010== 391 (176 direct, 215 indirect) bytes in 1 blocks are definitely lost in loss record 7 of 7
+==4010==    at 0x483BE63: operator new(unsigned long) (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==4010==    by 0x130D48: SearchEng::read_page(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (searcheng.cpp:103)
+==4010==    by 0x11997F: SearchEng_ReadPageMultipleTimes_Test::TestBody() (searcheng_tests.cpp:119)
+==4010==    by 0x166410: HandleSehExceptionsInMethodIfSupported<testing::Test, void> (gtest.cc:2433)
+==4010==    by 0x166410: void testing::internal::HandleExceptionsInMethodIfSupported<testing::Test, void>(testing::Test*, void (testing::Test::*)(), char const*) (gtest.cc:2469)
+==4010==    by 0x15AAB5: Run (gtest.cc:2508)
+==4010==    by 0x15AAB5: testing::Test::Run() (gtest.cc:2498)
+==4010==    by 0x15AC14: Run (gtest.cc:2684)
+==4010==    by 0x15AC14: testing::TestInfo::Run() (gtest.cc:2657)
+==4010==    by 0x15ACFC: Run (gtest.cc:2816)
+==4010==    by 0x15ACFC: testing::TestSuite::Run() (gtest.cc:2795)
+==4010==    by 0x15B21B: testing::internal::UnitTestImpl::RunAllTests() (gtest.cc:5338)
+==4010==    by 0x166980: HandleSehExceptionsInMethodIfSupported<testing::internal::UnitTestImpl, bool> (gtest.cc:2433)
+==4010==    by 0x166980: bool testing::internal::HandleExceptionsInMethodIfSupported<testing::internal::UnitTestImpl, bool>(testing::internal::UnitTestImpl*, bool (testing::internal::UnitTestImpl::*)(), char const*) (gtest.cc:2469)
+==4010==    by 0x15B44B: testing::UnitTest::Run() (gtest.cc:4925)
+==4010==    by 0x117DC3: main (in /work/hw-nlicea/hw2/hw2_tests/searcheng_tests/searcheng_tests)
+==4010== 
+==4010== LEAK SUMMARY:
+==4010==    definitely lost: 192 bytes in 3 blocks
+==4010==    indirectly lost: 215 bytes in 4 blocks
+==4010==      possibly lost: 0 bytes in 0 blocks
+==4010==    still reachable: 0 bytes in 0 blocks
+==4010==         suppressed: 0 bytes in 0 blocks
+==4010== 
+==4010== For lists of detected and suppressed errors, rerun with: -s
+==4010== ERROR SUMMARY: 5 errors from 5 contexts (suppressed: 0 from 0)
+<end of output>
+Test time =   0.96 sec
+----------------------------------------------------------
+Test Passed.
+"SearchEng.ReadPageMultipleTimes" end time: Feb 12 07:01 UTC
+"SearchEng.ReadPageMultipleTimes" time elapsed: 00:00:00
+----------------------------------------------------------
+
+3/9 Testing: SearchEng.ANDCombiner
+3/9 Test: SearchEng.ANDCombiner
+Command: "/usr/bin/valgrind" "--tool=memcheck" "--leak-check=yes" "--trace-children=no" "/work/hw-nlicea/hw2/hw2_tests/searcheng_tests/searcheng_tests" "--gtest_filter=SearchEng.ANDCombiner"
+Directory: /work/hw-nlicea/hw2/hw2_tests/searcheng_tests
+"SearchEng.ANDCombiner" start time: Feb 12 07:01 UTC
+Output:
+----------------------------------------------------------
+==4011== Memcheck, a memory error detector
+==4011== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==4011== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
+==4011== Command: /work/hw-nlicea/hw2/hw2_tests/searcheng_tests/searcheng_tests --gtest_filter=SearchEng.ANDCombiner
+==4011== 
+Running main() from /build/googletest-j5yxiC/googletest-1.10.0/googletest/src/gtest_main.cc
+Note: Google Test filter = SearchEng.ANDCombiner
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from SearchEng
+[ RUN      ] SearchEng.ANDCombiner
+==4011== Invalid read of size 8
+==4011==    at 0x130793: SearchEng::~SearchEng() (searcheng.cpp:34)
+==4011==    by 0x125973: std::default_delete<SearchEng>::operator()(SearchEng*) const (unique_ptr.h:81)
+==4011==    by 0x123CC3: std::unique_ptr<SearchEng, std::default_delete<SearchEng> >::~unique_ptr() (unique_ptr.h:292)
+==4011==    by 0x11B3FA: SearchEng_ANDCombiner_Test::TestBody() (searcheng_tests.cpp:140)
+==4011==    by 0x166410: HandleSehExceptionsInMethodIfSupported<testing::Test, void> (gtest.cc:2433)
+==4011==    by 0x166410: void testing::internal::HandleExceptionsInMethodIfSupported<testing::Test, void>(testing::Test*, void (testing::Test::*)(), char const*) (gtest.cc:2469)
+==4011==    by 0x15AAB5: Run (gtest.cc:2508)
+==4011==    by 0x15AAB5: testing::Test::Run() (gtest.cc:2498)
+==4011==    by 0x15AC14: Run (gtest.cc:2684)
+==4011==    by 0x15AC14: testing::TestInfo::Run() (gtest.cc:2657)
+==4011==    by 0x15ACFC: Run (gtest.cc:2816)
+==4011==    by 0x15ACFC: testing::TestSuite::Run() (gtest.cc:2795)
+==4011==    by 0x15B21B: testing::internal::UnitTestImpl::RunAllTests() (gtest.cc:5338)
+==4011==    by 0x166980: HandleSehExceptionsInMethodIfSupported<testing::internal::UnitTestImpl, bool> (gtest.cc:2433)
+==4011==    by 0x166980: bool testing::internal::HandleExceptionsInMethodIfSupported<testing::internal::UnitTestImpl, bool>(testing::internal::UnitTestImpl*, bool (testing::internal::UnitTestImpl::*)(), char const*) (gtest.cc:2469)
+==4011==    by 0x15B44B: testing::UnitTest::Run() (gtest.cc:4925)
+==4011==    by 0x117DC3: main (in /work/hw-nlicea/hw2/hw2_tests/searcheng_tests/searcheng_tests)
+==4011==  Address 0x4ddaac8 is 8 bytes before a block of size 176 alloc'd
+==4011==    at 0x483BE63: operator new(unsigned long) (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==4011==    by 0x130D48: SearchEng::read_page(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (searcheng.cpp:103)
+==4011==    by 0x118AA4: searchEngTestSetup() (searcheng_tests.cpp:73)
+==4011==    by 0x11A512: SearchEng_ANDCombiner_Test::TestBody() (searcheng_tests.cpp:140)
+==4011==    by 0x166410: HandleSehExceptionsInMethodIfSupported<testing::Test, void> (gtest.cc:2433)
+==4011==    by 0x166410: void testing::internal::HandleExceptionsInMethodIfSupported<testing::Test, void>(testing::Test*, void (testing::Test::*)(), char const*) (gtest.cc:2469)
+==4011==    by 0x15AAB5: Run (gtest.cc:2508)
+==4011==    by 0x15AAB5: testing::Test::Run() (gtest.cc:2498)
+==4011==    by 0x15AC14: Run (gtest.cc:2684)
+==4011==    by 0x15AC14: testing::TestInfo::Run() (gtest.cc:2657)
+==4011==    by 0x15ACFC: Run (gtest.cc:2816)
+==4011==    by 0x15ACFC: testing::TestSuite::Run() (gtest.cc:2795)
+==4011==    by 0x15B21B: testing::internal::UnitTestImpl::RunAllTests() (gtest.cc:5338)
+==4011==    by 0x166980: HandleSehExceptionsInMethodIfSupported<testing::internal::UnitTestImpl, bool> (gtest.cc:2433)
+==4011==    by 0x166980: bool testing::internal::HandleExceptionsInMethodIfSupported<testing::internal::UnitTestImpl, bool>(testing::internal::UnitTestImpl*, bool (testing::internal::UnitTestImpl::*)(), char const*) (gtest.cc:2469)
+==4011==    by 0x15B44B: testing::UnitTest::Run() (gtest.cc:4925)
+==4011==    by 0x117DC3: main (in /work/hw-nlicea/hw2/hw2_tests/searcheng_tests/searcheng_tests)
+==4011== 
+==4011== Invalid free() / delete / delete[] / realloc()
+==4011==    at 0x483D74F: operator delete[](void*) (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==4011==    by 0x1307CF: SearchEng::~SearchEng() (searcheng.cpp:34)
+==4011==    by 0x125973: std::default_delete<SearchEng>::operator()(SearchEng*) const (unique_ptr.h:81)
+==4011==    by 0x123CC3: std::unique_ptr<SearchEng, std::default_delete<SearchEng> >::~unique_ptr() (unique_ptr.h:292)
+==4011==    by 0x11B3FA: SearchEng_ANDCombiner_Test::TestBody() (searcheng_tests.cpp:140)
+==4011==    by 0x166410: HandleSehExceptionsInMethodIfSupported<testing::Test, void> (gtest.cc:2433)
+==4011==    by 0x166410: void testing::internal::HandleExceptionsInMethodIfSupported<testing::Test, void>(testing::Test*, void (testing::Test::*)(), char const*) (gtest.cc:2469)
+==4011==    by 0x15AAB5: Run (gtest.cc:2508)
+==4011==    by 0x15AAB5: testing::Test::Run() (gtest.cc:2498)
+==4011==    by 0x15AC14: Run (gtest.cc:2684)
+==4011==    by 0x15AC14: testing::TestInfo::Run() (gtest.cc:2657)
+==4011==    by 0x15ACFC: Run (gtest.cc:2816)
+==4011==    by 0x15ACFC: testing::TestSuite::Run() (gtest.cc:2795)
+==4011==    by 0x15B21B: testing::internal::UnitTestImpl::RunAllTests() (gtest.cc:5338)
+==4011==    by 0x166980: HandleSehExceptionsInMethodIfSupported<testing::internal::UnitTestImpl, bool> (gtest.cc:2433)
+==4011==    by 0x166980: bool testing::internal::HandleExceptionsInMethodIfSupported<testing::internal::UnitTestImpl, bool>(testing::internal::UnitTestImpl*, bool (testing::internal::UnitTestImpl::*)(), char const*) (gtest.cc:2469)
+==4011==    by 0x15B44B: testing::UnitTest::Run() (gtest.cc:4925)
+==4011==  Address 0x4ddaac8 is 8 bytes before a block of size 176 alloc'd
+==4011==    at 0x483BE63: operator new(unsigned long) (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==4011==    by 0x130D48: SearchEng::read_page(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (searcheng.cpp:103)
+==4011==    by 0x118AA4: searchEngTestSetup() (searcheng_tests.cpp:73)
+==4011==    by 0x11A512: SearchEng_ANDCombiner_Test::TestBody() (searcheng_tests.cpp:140)
+==4011==    by 0x166410: HandleSehExceptionsInMethodIfSupported<testing::Test, void> (gtest.cc:2433)
+==4011==    by 0x166410: void testing::internal::HandleExceptionsInMethodIfSupported<testing::Test, void>(testing::Test*, void (testing::Test::*)(), char const*) (gtest.cc:2469)
+==4011==    by 0x15AAB5: Run (gtest.cc:2508)
+==4011==    by 0x15AAB5: testing::Test::Run() (gtest.cc:2498)
+==4011==    by 0x15AC14: Run (gtest.cc:2684)
+==4011==    by 0x15AC14: testing::TestInfo::Run() (gtest.cc:2657)
+==4011==    by 0x15ACFC: Run (gtest.cc:2816)
+==4011==    by 0x15ACFC: testing::TestSuite::Run() (gtest.cc:2795)
+==4011==    by 0x15B21B: testing::internal::UnitTestImpl::RunAllTests() (gtest.cc:5338)
+==4011==    by 0x166980: HandleSehExceptionsInMethodIfSupported<testing::internal::UnitTestImpl, bool> (gtest.cc:2433)
+==4011==    by 0x166980: bool testing::internal::HandleExceptionsInMethodIfSupported<testing::internal::UnitTestImpl, bool>(testing::internal::UnitTestImpl*, bool (testing::internal::UnitTestImpl::*)(), char const*) (gtest.cc:2469)
+==4011==    by 0x15B44B: testing::UnitTest::Run() (gtest.cc:4925)
+==4011==    by 0x117DC3: main (in /work/hw-nlicea/hw2/hw2_tests/searcheng_tests/searcheng_tests)
+==4011== 
+[       OK ] SearchEng.ANDCombiner (162 ms)
+[----------] 1 test from SearchEng (166 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (183 ms total)
+[  PASSED  ] 1 test.
+==4011== 
+==4011== HEAP SUMMARY:
+==4011==     in use at exit: 1,360 bytes in 16 blocks
+==4011==   total heap usage: 368 allocs, 356 frees, 196,103 bytes allocated
+==4011== 
+==4011== 8 bytes in 1 blocks are definitely lost in loss record 1 of 7
+==4011==    at 0x483BE63: operator new(unsigned long) (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==4011==    by 0x118426: searchEngFactory() (searcheng_tests.cpp:41)
+==4011==    by 0x1187FE: searchEngTestSetup() (searcheng_tests.cpp:66)
+==4011==    by 0x11A512: SearchEng_ANDCombiner_Test::TestBody() (searcheng_tests.cpp:140)
+==4011==    by 0x166410: HandleSehExceptionsInMethodIfSupported<testing::Test, void> (gtest.cc:2433)
+==4011==    by 0x166410: void testing::internal::HandleExceptionsInMethodIfSupported<testing::Test, void>(testing::Test*, void (testing::Test::*)(), char const*) (gtest.cc:2469)
+==4011==    by 0x15AAB5: Run (gtest.cc:2508)
+==4011==    by 0x15AAB5: testing::Test::Run() (gtest.cc:2498)
+==4011==    by 0x15AC14: Run (gtest.cc:2684)
+==4011==    by 0x15AC14: testing::TestInfo::Run() (gtest.cc:2657)
+==4011==    by 0x15ACFC: Run (gtest.cc:2816)
+==4011==    by 0x15ACFC: testing::TestSuite::Run() (gtest.cc:2795)
+==4011==    by 0x15B21B: testing::internal::UnitTestImpl::RunAllTests() (gtest.cc:5338)
+==4011==    by 0x166980: HandleSehExceptionsInMethodIfSupported<testing::internal::UnitTestImpl, bool> (gtest.cc:2433)
+==4011==    by 0x166980: bool testing::internal::HandleExceptionsInMethodIfSupported<testing::internal::UnitTestImpl, bool>(testing::internal::UnitTestImpl*, bool (testing::internal::UnitTestImpl::*)(), char const*) (gtest.cc:2469)
+==4011==    by 0x15B44B: testing::UnitTest::Run() (gtest.cc:4925)
+==4011==    by 0x117DC3: main (in /work/hw-nlicea/hw2/hw2_tests/searcheng_tests/searcheng_tests)
+==4011== 
+==4011== 8 bytes in 1 blocks are definitely lost in loss record 2 of 7
+==4011==    at 0x483BE63: operator new(unsigned long) (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==4011==    by 0x118497: searchEngFactory() (searcheng_tests.cpp:42)
+==4011==    by 0x1187FE: searchEngTestSetup() (searcheng_tests.cpp:66)
+==4011==    by 0x11A512: SearchEng_ANDCombiner_Test::TestBody() (searcheng_tests.cpp:140)
+==4011==    by 0x166410: HandleSehExceptionsInMethodIfSupported<testing::Test, void> (gtest.cc:2433)
+==4011==    by 0x166410: void testing::internal::HandleExceptionsInMethodIfSupported<testing::Test, void>(testing::Test*, void (testing::Test::*)(), char const*) (gtest.cc:2469)
+==4011==    by 0x15AAB5: Run (gtest.cc:2508)
+==4011==    by 0x15AAB5: testing::Test::Run() (gtest.cc:2498)
+==4011==    by 0x15AC14: Run (gtest.cc:2684)
+==4011==    by 0x15AC14: testing::TestInfo::Run() (gtest.cc:2657)
+==4011==    by 0x15ACFC: Run (gtest.cc:2816)
+==4011==    by 0x15ACFC: testing::TestSuite::Run() (gtest.cc:2795)
+==4011==    by 0x15B21B: testing::internal::UnitTestImpl::RunAllTests() (gtest.cc:5338)
+==4011==    by 0x166980: HandleSehExceptionsInMethodIfSupported<testing::internal::UnitTestImpl, bool> (gtest.cc:2433)
+==4011==    by 0x166980: bool testing::internal::HandleExceptionsInMethodIfSupported<testing::internal::UnitTestImpl, bool>(testing::internal::UnitTestImpl*, bool (testing::internal::UnitTestImpl::*)(), char const*) (gtest.cc:2469)
+==4011==    by 0x15B44B: testing::UnitTest::Run() (gtest.cc:4925)
+==4011==    by 0x117DC3: main (in /work/hw-nlicea/hw2/hw2_tests/searcheng_tests/searcheng_tests)
+==4011== 
+==4011== 1,344 (704 direct, 640 indirect) bytes in 4 blocks are definitely lost in loss record 7 of 7
+==4011==    at 0x483BE63: operator new(unsigned long) (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==4011==    by 0x130D48: SearchEng::read_page(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (searcheng.cpp:103)
+==4011==    by 0x118AA4: searchEngTestSetup() (searcheng_tests.cpp:73)
+==4011==    by 0x11A512: SearchEng_ANDCombiner_Test::TestBody() (searcheng_tests.cpp:140)
+==4011==    by 0x166410: HandleSehExceptionsInMethodIfSupported<testing::Test, void> (gtest.cc:2433)
+==4011==    by 0x166410: void testing::internal::HandleExceptionsInMethodIfSupported<testing::Test, void>(testing::Test*, void (testing::Test::*)(), char const*) (gtest.cc:2469)
+==4011==    by 0x15AAB5: Run (gtest.cc:2508)
+==4011==    by 0x15AAB5: testing::Test::Run() (gtest.cc:2498)
+==4011==    by 0x15AC14: Run (gtest.cc:2684)
+==4011==    by 0x15AC14: testing::TestInfo::Run() (gtest.cc:2657)
+==4011==    by 0x15ACFC: Run (gtest.cc:2816)
+==4011==    by 0x15ACFC: testing::TestSuite::Run() (gtest.cc:2795)
+==4011==    by 0x15B21B: testing::internal::UnitTestImpl::RunAllTests() (gtest.cc:5338)
+==4011==    by 0x166980: HandleSehExceptionsInMethodIfSupported<testing::internal::UnitTestImpl, bool> (gtest.cc:2433)
+==4011==    by 0x166980: bool testing::internal::HandleExceptionsInMethodIfSupported<testing::internal::UnitTestImpl, bool>(testing::internal::UnitTestImpl*, bool (testing::internal::UnitTestImpl::*)(), char const*) (gtest.cc:2469)
+==4011==    by 0x15B44B: testing::UnitTest::Run() (gtest.cc:4925)
+==4011==    by 0x117DC3: main (in /work/hw-nlicea/hw2/hw2_tests/searcheng_tests/searcheng_tests)
+==4011== 
+==4011== LEAK SUMMARY:
+==4011==    definitely lost: 720 bytes in 6 blocks
+==4011==    indirectly lost: 640 bytes in 10 blocks
+==4011==      possibly lost: 0 bytes in 0 blocks
+==4011==    still reachable: 0 bytes in 0 blocks
+==4011==         suppressed: 0 bytes in 0 blocks
+==4011== 
+==4011== For lists of detected and suppressed errors, rerun with: -s
+==4011== ERROR SUMMARY: 11 errors from 5 contexts (suppressed: 0 from 0)
+<end of output>
+Test time =   0.99 sec
+----------------------------------------------------------
+Test Passed.
+"SearchEng.ANDCombiner" end time: Feb 12 07:01 UTC
+"SearchEng.ANDCombiner" time elapsed: 00:00:00
+----------------------------------------------------------
+
+4/9 Testing: SearchEng.ORCombiner
+4/9 Test: SearchEng.ORCombiner
+Command: "/usr/bin/valgrind" "--tool=memcheck" "--leak-check=yes" "--trace-children=no" "/work/hw-nlicea/hw2/hw2_tests/searcheng_tests/searcheng_tests" "--gtest_filter=SearchEng.ORCombiner"
+Directory: /work/hw-nlicea/hw2/hw2_tests/searcheng_tests
+"SearchEng.ORCombiner" start time: Feb 12 07:01 UTC
+Output:
+----------------------------------------------------------
+==4012== Memcheck, a memory error detector
+==4012== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==4012== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
+==4012== Command: /work/hw-nlicea/hw2/hw2_tests/searcheng_tests/searcheng_tests --gtest_filter=SearchEng.ORCombiner
+==4012== 
+Running main() from /build/googletest-j5yxiC/googletest-1.10.0/googletest/src/gtest_main.cc
+Note: Google Test filter = SearchEng.ORCombiner
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from SearchEng
+[ RUN      ] SearchEng.ORCombiner
+==4012== Invalid read of size 8
+==4012==    at 0x130793: SearchEng::~SearchEng() (searcheng.cpp:34)
+==4012==    by 0x125973: std::default_delete<SearchEng>::operator()(SearchEng*) const (unique_ptr.h:81)
+==4012==    by 0x123CC3: std::unique_ptr<SearchEng, std::default_delete<SearchEng> >::~unique_ptr() (unique_ptr.h:292)
+==4012==    by 0x11C61B: SearchEng_ORCombiner_Test::TestBody() (searcheng_tests.cpp:169)
+==4012==    by 0x166410: HandleSehExceptionsInMethodIfSupported<testing::Test, void> (gtest.cc:2433)
+==4012==    by 0x166410: void testing::internal::HandleExceptionsInMethodIfSupported<testing::Test, void>(testing::Test*, void (testing::Test::*)(), char const*) (gtest.cc:2469)
+==4012==    by 0x15AAB5: Run (gtest.cc:2508)
+==4012==    by 0x15AAB5: testing::Test::Run() (gtest.cc:2498)
+==4012==    by 0x15AC14: Run (gtest.cc:2684)
+==4012==    by 0x15AC14: testing::TestInfo::Run() (gtest.cc:2657)
+==4012==    by 0x15ACFC: Run (gtest.cc:2816)
+==4012==    by 0x15ACFC: testing::TestSuite::Run() (gtest.cc:2795)
+==4012==    by 0x15B21B: testing::internal::UnitTestImpl::RunAllTests() (gtest.cc:5338)
+==4012==    by 0x166980: HandleSehExceptionsInMethodIfSupported<testing::internal::UnitTestImpl, bool> (gtest.cc:2433)
+==4012==    by 0x166980: bool testing::internal::HandleExceptionsInMethodIfSupported<testing::internal::UnitTestImpl, bool>(testing::internal::UnitTestImpl*, bool (testing::internal::UnitTestImpl::*)(), char const*) (gtest.cc:2469)
+==4012==    by 0x15B44B: testing::UnitTest::Run() (gtest.cc:4925)
+==4012==    by 0x117DC3: main (in /work/hw-nlicea/hw2/hw2_tests/searcheng_tests/searcheng_tests)
+==4012==  Address 0x4dedce8 is 8 bytes before a block of size 176 alloc'd
+==4012==    at 0x483BE63: operator new(unsigned long) (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==4012==    by 0x130D48: SearchEng::read_page(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (searcheng.cpp:103)
+==4012==    by 0x11BB99: SearchEng_ORCombiner_Test::TestBody() (searcheng_tests.cpp:172)
+==4012==    by 0x166410: HandleSehExceptionsInMethodIfSupported<testing::Test, void> (gtest.cc:2433)
+==4012==    by 0x166410: void testing::internal::HandleExceptionsInMethodIfSupported<testing::Test, void>(testing::Test*, void (testing::Test::*)(), char const*) (gtest.cc:2469)
+==4012==    by 0x15AAB5: Run (gtest.cc:2508)
+==4012==    by 0x15AAB5: testing::Test::Run() (gtest.cc:2498)
+==4012==    by 0x15AC14: Run (gtest.cc:2684)
+==4012==    by 0x15AC14: testing::TestInfo::Run() (gtest.cc:2657)
+==4012==    by 0x15ACFC: Run (gtest.cc:2816)
+==4012==    by 0x15ACFC: testing::TestSuite::Run() (gtest.cc:2795)
+==4012==    by 0x15B21B: testing::internal::UnitTestImpl::RunAllTests() (gtest.cc:5338)
+==4012==    by 0x166980: HandleSehExceptionsInMethodIfSupported<testing::internal::UnitTestImpl, bool> (gtest.cc:2433)
+==4012==    by 0x166980: bool testing::internal::HandleExceptionsInMethodIfSupported<testing::internal::UnitTestImpl, bool>(testing::internal::UnitTestImpl*, bool (testing::internal::UnitTestImpl::*)(), char const*) (gtest.cc:2469)
+==4012==    by 0x15B44B: testing::UnitTest::Run() (gtest.cc:4925)
+==4012==    by 0x117DC3: main (in /work/hw-nlicea/hw2/hw2_tests/searcheng_tests/searcheng_tests)
+==4012== 
+==4012== Invalid free() / delete / delete[] / realloc()
+==4012==    at 0x483D74F: operator delete[](void*) (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==4012==    by 0x1307CF: SearchEng::~SearchEng() (searcheng.cpp:34)
+==4012==    by 0x125973: std::default_delete<SearchEng>::operator()(SearchEng*) const (unique_ptr.h:81)
+==4012==    by 0x123CC3: std::unique_ptr<SearchEng, std::default_delete<SearchEng> >::~unique_ptr() (unique_ptr.h:292)
+==4012==    by 0x11C61B: SearchEng_ORCombiner_Test::TestBody() (searcheng_tests.cpp:169)
+==4012==    by 0x166410: HandleSehExceptionsInMethodIfSupported<testing::Test, void> (gtest.cc:2433)
+==4012==    by 0x166410: void testing::internal::HandleExceptionsInMethodIfSupported<testing::Test, void>(testing::Test*, void (testing::Test::*)(), char const*) (gtest.cc:2469)
+==4012==    by 0x15AAB5: Run (gtest.cc:2508)
+==4012==    by 0x15AAB5: testing::Test::Run() (gtest.cc:2498)
+==4012==    by 0x15AC14: Run (gtest.cc:2684)
+==4012==    by 0x15AC14: testing::TestInfo::Run() (gtest.cc:2657)
+==4012==    by 0x15ACFC: Run (gtest.cc:2816)
+==4012==    by 0x15ACFC: testing::TestSuite::Run() (gtest.cc:2795)
+==4012==    by 0x15B21B: testing::internal::UnitTestImpl::RunAllTests() (gtest.cc:5338)
+==4012==    by 0x166980: HandleSehExceptionsInMethodIfSupported<testing::internal::UnitTestImpl, bool> (gtest.cc:2433)
+==4012==    by 0x166980: bool testing::internal::HandleExceptionsInMethodIfSupported<testing::internal::UnitTestImpl, bool>(testing::internal::UnitTestImpl*, bool (testing::internal::UnitTestImpl::*)(), char const*) (gtest.cc:2469)
+==4012==    by 0x15B44B: testing::UnitTest::Run() (gtest.cc:4925)
+==4012==  Address 0x4dedce8 is 8 bytes before a block of size 176 alloc'd
+==4012==    at 0x483BE63: operator new(unsigned long) (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==4012==    by 0x130D48: SearchEng::read_page(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (searcheng.cpp:103)
+==4012==    by 0x11BB99: SearchEng_ORCombiner_Test::TestBody() (searcheng_tests.cpp:172)
+==4012==    by 0x166410: HandleSehExceptionsInMethodIfSupported<testing::Test, void> (gtest.cc:2433)
+==4012==    by 0x166410: void testing::internal::HandleExceptionsInMethodIfSupported<testing::Test, void>(testing::Test*, void (testing::Test::*)(), char const*) (gtest.cc:2469)
+==4012==    by 0x15AAB5: Run (gtest.cc:2508)
+==4012==    by 0x15AAB5: testing::Test::Run() (gtest.cc:2498)
+==4012==    by 0x15AC14: Run (gtest.cc:2684)
+==4012==    by 0x15AC14: testing::TestInfo::Run() (gtest.cc:2657)
+==4012==    by 0x15ACFC: Run (gtest.cc:2816)
+==4012==    by 0x15ACFC: testing::TestSuite::Run() (gtest.cc:2795)
+==4012==    by 0x15B21B: testing::internal::UnitTestImpl::RunAllTests() (gtest.cc:5338)
+==4012==    by 0x166980: HandleSehExceptionsInMethodIfSupported<testing::internal::UnitTestImpl, bool> (gtest.cc:2433)
+==4012==    by 0x166980: bool testing::internal::HandleExceptionsInMethodIfSupported<testing::internal::UnitTestImpl, bool>(testing::internal::UnitTestImpl*, bool (testing::internal::UnitTestImpl::*)(), char const*) (gtest.cc:2469)
+==4012==    by 0x15B44B: testing::UnitTest::Run() (gtest.cc:4925)
+==4012==    by 0x117DC3: main (in /work/hw-nlicea/hw2/hw2_tests/searcheng_tests/searcheng_tests)
+==4012== 
+[       OK ] SearchEng.ORCombiner (172 ms)
+[----------] 1 test from SearchEng (177 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (194 ms total)
+[  PASSED  ] 1 test.
+==4012== 
+==4012== HEAP SUMMARY:
+==4012==     in use at exit: 1,664 bytes in 19 blocks
+==4012==   total heap usage: 387 allocs, 373 frees, 214,496 bytes allocated
+==4012== 
+==4012== 8 bytes in 1 blocks are definitely lost in loss record 1 of 8
+==4012==    at 0x483BE63: operator new(unsigned long) (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==4012==    by 0x118426: searchEngFactory() (searcheng_tests.cpp:41)
+==4012==    by 0x1187FE: searchEngTestSetup() (searcheng_tests.cpp:66)
+==4012==    by 0x11BA9C: SearchEng_ORCombiner_Test::TestBody() (searcheng_tests.cpp:169)
+==4012==    by 0x166410: HandleSehExceptionsInMethodIfSupported<testing::Test, void> (gtest.cc:2433)
+==4012==    by 0x166410: void testing::internal::HandleExceptionsInMethodIfSupported<testing::Test, void>(testing::Test*, void (testing::Test::*)(), char const*) (gtest.cc:2469)
+==4012==    by 0x15AAB5: Run (gtest.cc:2508)
+==4012==    by 0x15AAB5: testing::Test::Run() (gtest.cc:2498)
+==4012==    by 0x15AC14: Run (gtest.cc:2684)
+==4012==    by 0x15AC14: testing::TestInfo::Run() (gtest.cc:2657)
+==4012==    by 0x15ACFC: Run (gtest.cc:2816)
+==4012==    by 0x15ACFC: testing::TestSuite::Run() (gtest.cc:2795)
+==4012==    by 0x15B21B: testing::internal::UnitTestImpl::RunAllTests() (gtest.cc:5338)
+==4012==    by 0x166980: HandleSehExceptionsInMethodIfSupported<testing::internal::UnitTestImpl, bool> (gtest.cc:2433)
+==4012==    by 0x166980: bool testing::internal::HandleExceptionsInMethodIfSupported<testing::internal::UnitTestImpl, bool>(testing::internal::UnitTestImpl*, bool (testing::internal::UnitTestImpl::*)(), char const*) (gtest.cc:2469)
+==4012==    by 0x15B44B: testing::UnitTest::Run() (gtest.cc:4925)
+==4012==    by 0x117DC3: main (in /work/hw-nlicea/hw2/hw2_tests/searcheng_tests/searcheng_tests)
+==4012== 
+==4012== 8 bytes in 1 blocks are definitely lost in loss record 2 of 8
+==4012==    at 0x483BE63: operator new(unsigned long) (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==4012==    by 0x118497: searchEngFactory() (searcheng_tests.cpp:42)
+==4012==    by 0x1187FE: searchEngTestSetup() (searcheng_tests.cpp:66)
+==4012==    by 0x11BA9C: SearchEng_ORCombiner_Test::TestBody() (searcheng_tests.cpp:169)
+==4012==    by 0x166410: HandleSehExceptionsInMethodIfSupported<testing::Test, void> (gtest.cc:2433)
+==4012==    by 0x166410: void testing::internal::HandleExceptionsInMethodIfSupported<testing::Test, void>(testing::Test*, void (testing::Test::*)(), char const*) (gtest.cc:2469)
+==4012==    by 0x15AAB5: Run (gtest.cc:2508)
+==4012==    by 0x15AAB5: testing::Test::Run() (gtest.cc:2498)
+==4012==    by 0x15AC14: Run (gtest.cc:2684)
+==4012==    by 0x15AC14: testing::TestInfo::Run() (gtest.cc:2657)
+==4012==    by 0x15ACFC: Run (gtest.cc:2816)
+==4012==    by 0x15ACFC: testing::TestSuite::Run() (gtest.cc:2795)
+==4012==    by 0x15B21B: testing::internal::UnitTestImpl::RunAllTests() (gtest.cc:5338)
+==4012==    by 0x166980: HandleSehExceptionsInMethodIfSupported<testing::internal::UnitTestImpl, bool> (gtest.cc:2433)
+==4012==    by 0x166980: bool testing::internal::HandleExceptionsInMethodIfSupported<testing::internal::UnitTestImpl, bool>(testing::internal::UnitTestImpl*, bool (testing::internal::UnitTestImpl::*)(), char const*) (gtest.cc:2469)
+==4012==    by 0x15B44B: testing::UnitTest::Run() (gtest.cc:4925)
+==4012==    by 0x117DC3: main (in /work/hw-nlicea/hw2/hw2_tests/searcheng_tests/searcheng_tests)
+==4012== 
+==4012== 304 (176 direct, 128 indirect) bytes in 1 blocks are definitely lost in loss record 6 of 8
+==4012==    at 0x483BE63: operator new(unsigned long) (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==4012==    by 0x130D48: SearchEng::read_page(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (searcheng.cpp:103)
+==4012==    by 0x11BB99: SearchEng_ORCombiner_Test::TestBody() (searcheng_tests.cpp:172)
+==4012==    by 0x166410: HandleSehExceptionsInMethodIfSupported<testing::Test, void> (gtest.cc:2433)
+==4012==    by 0x166410: void testing::internal::HandleExceptionsInMethodIfSupported<testing::Test, void>(testing::Test*, void (testing::Test::*)(), char const*) (gtest.cc:2469)
+==4012==    by 0x15AAB5: Run (gtest.cc:2508)
+==4012==    by 0x15AAB5: testing::Test::Run() (gtest.cc:2498)
+==4012==    by 0x15AC14: Run (gtest.cc:2684)
+==4012==    by 0x15AC14: testing::TestInfo::Run() (gtest.cc:2657)
+==4012==    by 0x15ACFC: Run (gtest.cc:2816)
+==4012==    by 0x15ACFC: testing::TestSuite::Run() (gtest.cc:2795)
+==4012==    by 0x15B21B: testing::internal::UnitTestImpl::RunAllTests() (gtest.cc:5338)
+==4012==    by 0x166980: HandleSehExceptionsInMethodIfSupported<testing::internal::UnitTestImpl, bool> (gtest.cc:2433)
+==4012==    by 0x166980: bool testing::internal::HandleExceptionsInMethodIfSupported<testing::internal::UnitTestImpl, bool>(testing::internal::UnitTestImpl*, bool (testing::internal::UnitTestImpl::*)(), char const*) (gtest.cc:2469)
+==4012==    by 0x15B44B: testing::UnitTest::Run() (gtest.cc:4925)
+==4012==    by 0x117DC3: main (in /work/hw-nlicea/hw2/hw2_tests/searcheng_tests/searcheng_tests)
+==4012== 
+==4012== 1,344 (704 direct, 640 indirect) bytes in 4 blocks are definitely lost in loss record 8 of 8
+==4012==    at 0x483BE63: operator new(unsigned long) (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==4012==    by 0x130D48: SearchEng::read_page(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (searcheng.cpp:103)
+==4012==    by 0x118AA4: searchEngTestSetup() (searcheng_tests.cpp:73)
+==4012==    by 0x11BA9C: SearchEng_ORCombiner_Test::TestBody() (searcheng_tests.cpp:169)
+==4012==    by 0x166410: HandleSehExceptionsInMethodIfSupported<testing::Test, void> (gtest.cc:2433)
+==4012==    by 0x166410: void testing::internal::HandleExceptionsInMethodIfSupported<testing::Test, void>(testing::Test*, void (testing::Test::*)(), char const*) (gtest.cc:2469)
+==4012==    by 0x15AAB5: Run (gtest.cc:2508)
+==4012==    by 0x15AAB5: testing::Test::Run() (gtest.cc:2498)
+==4012==    by 0x15AC14: Run (gtest.cc:2684)
+==4012==    by 0x15AC14: testing::TestInfo::Run() (gtest.cc:2657)
+==4012==    by 0x15ACFC: Run (gtest.cc:2816)
+==4012==    by 0x15ACFC: testing::TestSuite::Run() (gtest.cc:2795)
+==4012==    by 0x15B21B: testing::internal::UnitTestImpl::RunAllTests() (gtest.cc:5338)
+==4012==    by 0x166980: HandleSehExceptionsInMethodIfSupported<testing::internal::UnitTestImpl, bool> (gtest.cc:2433)
+==4012==    by 0x166980: bool testing::internal::HandleExceptionsInMethodIfSupported<testing::internal::UnitTestImpl, bool>(testing::internal::UnitTestImpl*, bool (testing::internal::UnitTestImpl::*)(), char const*) (gtest.cc:2469)
+==4012==    by 0x15B44B: testing::UnitTest::Run() (gtest.cc:4925)
+==4012==    by 0x117DC3: main (in /work/hw-nlicea/hw2/hw2_tests/searcheng_tests/searcheng_tests)
+==4012== 
+==4012== LEAK SUMMARY:
+==4012==    definitely lost: 896 bytes in 7 blocks
+==4012==    indirectly lost: 768 bytes in 12 blocks
+==4012==      possibly lost: 0 bytes in 0 blocks
+==4012==    still reachable: 0 bytes in 0 blocks
+==4012==         suppressed: 0 bytes in 0 blocks
+==4012== 
+==4012== For lists of detected and suppressed errors, rerun with: -s
+==4012== ERROR SUMMARY: 14 errors from 6 contexts (suppressed: 0 from 0)
+<end of output>
+Test time =   0.99 sec
+----------------------------------------------------------
+Test Passed.
+"SearchEng.ORCombiner" end time: Feb 12 07:01 UTC
+"SearchEng.ORCombiner" time elapsed: 00:00:00
+----------------------------------------------------------
+
+5/9 Testing: SearchEng.DiffCombiner
+5/9 Test: SearchEng.DiffCombiner
+Command: "/usr/bin/valgrind" "--tool=memcheck" "--leak-check=yes" "--trace-children=no" "/work/hw-nlicea/hw2/hw2_tests/searcheng_tests/searcheng_tests" "--gtest_filter=SearchEng.DiffCombiner"
+Directory: /work/hw-nlicea/hw2/hw2_tests/searcheng_tests
+"SearchEng.DiffCombiner" start time: Feb 12 07:01 UTC
+Output:
+----------------------------------------------------------
+==4013== Memcheck, a memory error detector
+==4013== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==4013== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
+==4013== Command: /work/hw-nlicea/hw2/hw2_tests/searcheng_tests/searcheng_tests --gtest_filter=SearchEng.DiffCombiner
+==4013== 
+Running main() from /build/googletest-j5yxiC/googletest-1.10.0/googletest/src/gtest_main.cc
+Note: Google Test filter = SearchEng.DiffCombiner
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from SearchEng
+[ RUN      ] SearchEng.DiffCombiner
+==4013== Invalid read of size 8
+==4013==    at 0x130793: SearchEng::~SearchEng() (searcheng.cpp:34)
+==4013==    by 0x125973: std::default_delete<SearchEng>::operator()(SearchEng*) const (unique_ptr.h:81)
+==4013==    by 0x123CC3: std::unique_ptr<SearchEng, std::default_delete<SearchEng> >::~unique_ptr() (unique_ptr.h:292)
+==4013==    by 0x11D605: SearchEng_DiffCombiner_Test::TestBody() (searcheng_tests.cpp:199)
+==4013==    by 0x166410: HandleSehExceptionsInMethodIfSupported<testing::Test, void> (gtest.cc:2433)
+==4013==    by 0x166410: void testing::internal::HandleExceptionsInMethodIfSupported<testing::Test, void>(testing::Test*, void (testing::Test::*)(), char const*) (gtest.cc:2469)
+==4013==    by 0x15AAB5: Run (gtest.cc:2508)
+==4013==    by 0x15AAB5: testing::Test::Run() (gtest.cc:2498)
+==4013==    by 0x15AC14: Run (gtest.cc:2684)
+==4013==    by 0x15AC14: testing::TestInfo::Run() (gtest.cc:2657)
+==4013==    by 0x15ACFC: Run (gtest.cc:2816)
+==4013==    by 0x15ACFC: testing::TestSuite::Run() (gtest.cc:2795)
+==4013==    by 0x15B21B: testing::internal::UnitTestImpl::RunAllTests() (gtest.cc:5338)
+==4013==    by 0x166980: HandleSehExceptionsInMethodIfSupported<testing::internal::UnitTestImpl, bool> (gtest.cc:2433)
+==4013==    by 0x166980: bool testing::internal::HandleExceptionsInMethodIfSupported<testing::internal::UnitTestImpl, bool>(testing::internal::UnitTestImpl*, bool (testing::internal::UnitTestImpl::*)(), char const*) (gtest.cc:2469)
+==4013==    by 0x15B44B: testing::UnitTest::Run() (gtest.cc:4925)
+==4013==    by 0x117DC3: main (in /work/hw-nlicea/hw2/hw2_tests/searcheng_tests/searcheng_tests)
+==4013==  Address 0x4dedce8 is 8 bytes before a block of size 176 alloc'd
+==4013==    at 0x483BE63: operator new(unsigned long) (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==4013==    by 0x130D48: SearchEng::read_page(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (searcheng.cpp:103)
+==4013==    by 0x11CC8B: SearchEng_DiffCombiner_Test::TestBody() (searcheng_tests.cpp:202)
+==4013==    by 0x166410: HandleSehExceptionsInMethodIfSupported<testing::Test, void> (gtest.cc:2433)
+==4013==    by 0x166410: void testing::internal::HandleExceptionsInMethodIfSupported<testing::Test, void>(testing::Test*, void (testing::Test::*)(), char const*) (gtest.cc:2469)
+==4013==    by 0x15AAB5: Run (gtest.cc:2508)
+==4013==    by 0x15AAB5: testing::Test::Run() (gtest.cc:2498)
+==4013==    by 0x15AC14: Run (gtest.cc:2684)
+==4013==    by 0x15AC14: testing::TestInfo::Run() (gtest.cc:2657)
+==4013==    by 0x15ACFC: Run (gtest.cc:2816)
+==4013==    by 0x15ACFC: testing::TestSuite::Run() (gtest.cc:2795)
+==4013==    by 0x15B21B: testing::internal::UnitTestImpl::RunAllTests() (gtest.cc:5338)
+==4013==    by 0x166980: HandleSehExceptionsInMethodIfSupported<testing::internal::UnitTestImpl, bool> (gtest.cc:2433)
+==4013==    by 0x166980: bool testing::internal::HandleExceptionsInMethodIfSupported<testing::internal::UnitTestImpl, bool>(testing::internal::UnitTestImpl*, bool (testing::internal::UnitTestImpl::*)(), char const*) (gtest.cc:2469)
+==4013==    by 0x15B44B: testing::UnitTest::Run() (gtest.cc:4925)
+==4013==    by 0x117DC3: main (in /work/hw-nlicea/hw2/hw2_tests/searcheng_tests/searcheng_tests)
+==4013== 
+==4013== Invalid free() / delete / delete[] / realloc()
+==4013==    at 0x483D74F: operator delete[](void*) (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==4013==    by 0x1307CF: SearchEng::~SearchEng() (searcheng.cpp:34)
+==4013==    by 0x125973: std::default_delete<SearchEng>::operator()(SearchEng*) const (unique_ptr.h:81)
+==4013==    by 0x123CC3: std::unique_ptr<SearchEng, std::default_delete<SearchEng> >::~unique_ptr() (unique_ptr.h:292)
+==4013==    by 0x11D605: SearchEng_DiffCombiner_Test::TestBody() (searcheng_tests.cpp:199)
+==4013==    by 0x166410: HandleSehExceptionsInMethodIfSupported<testing::Test, void> (gtest.cc:2433)
+==4013==    by 0x166410: void testing::internal::HandleExceptionsInMethodIfSupported<testing::Test, void>(testing::Test*, void (testing::Test::*)(), char const*) (gtest.cc:2469)
+==4013==    by 0x15AAB5: Run (gtest.cc:2508)
+==4013==    by 0x15AAB5: testing::Test::Run() (gtest.cc:2498)
+==4013==    by 0x15AC14: Run (gtest.cc:2684)
+==4013==    by 0x15AC14: testing::TestInfo::Run() (gtest.cc:2657)
+==4013==    by 0x15ACFC: Run (gtest.cc:2816)
+==4013==    by 0x15ACFC: testing::TestSuite::Run() (gtest.cc:2795)
+==4013==    by 0x15B21B: testing::internal::UnitTestImpl::RunAllTests() (gtest.cc:5338)
+==4013==    by 0x166980: HandleSehExceptionsInMethodIfSupported<testing::internal::UnitTestImpl, bool> (gtest.cc:2433)
+==4013==    by 0x166980: bool testing::internal::HandleExceptionsInMethodIfSupported<testing::internal::UnitTestImpl, bool>(testing::internal::UnitTestImpl*, bool (testing::internal::UnitTestImpl::*)(), char const*) (gtest.cc:2469)
+==4013==    by 0x15B44B: testing::UnitTest::Run() (gtest.cc:4925)
+==4013==  Address 0x4dedce8 is 8 bytes before a block of size 176 alloc'd
+==4013==    at 0x483BE63: operator new(unsigned long) (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==4013==    by 0x130D48: SearchEng::read_page(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (searcheng.cpp:103)
+==4013==    by 0x11CC8B: SearchEng_DiffCombiner_Test::TestBody() (searcheng_tests.cpp:202)
+==4013==    by 0x166410: HandleSehExceptionsInMethodIfSupported<testing::Test, void> (gtest.cc:2433)
+==4013==    by 0x166410: void testing::internal::HandleExceptionsInMethodIfSupported<testing::Test, void>(testing::Test*, void (testing::Test::*)(), char const*) (gtest.cc:2469)
+==4013==    by 0x15AAB5: Run (gtest.cc:2508)
+==4013==    by 0x15AAB5: testing::Test::Run() (gtest.cc:2498)
+==4013==    by 0x15AC14: Run (gtest.cc:2684)
+==4013==    by 0x15AC14: testing::TestInfo::Run() (gtest.cc:2657)
+==4013==    by 0x15ACFC: Run (gtest.cc:2816)
+==4013==    by 0x15ACFC: testing::TestSuite::Run() (gtest.cc:2795)
+==4013==    by 0x15B21B: testing::internal::UnitTestImpl::RunAllTests() (gtest.cc:5338)
+==4013==    by 0x166980: HandleSehExceptionsInMethodIfSupported<testing::internal::UnitTestImpl, bool> (gtest.cc:2433)
+==4013==    by 0x166980: bool testing::internal::HandleExceptionsInMethodIfSupported<testing::internal::UnitTestImpl, bool>(testing::internal::UnitTestImpl*, bool (testing::internal::UnitTestImpl::*)(), char const*) (gtest.cc:2469)
+==4013==    by 0x15B44B: testing::UnitTest::Run() (gtest.cc:4925)
+==4013==    by 0x117DC3: main (in /work/hw-nlicea/hw2/hw2_tests/searcheng_tests/searcheng_tests)
+==4013== 
+[       OK ] SearchEng.DiffCombiner (176 ms)
+[----------] 1 test from SearchEng (180 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (198 ms total)
+[  PASSED  ] 1 test.
+==4013== 
+==4013== HEAP SUMMARY:
+==4013==     in use at exit: 1,664 bytes in 19 blocks
+==4013==   total heap usage: 386 allocs, 372 frees, 214,262 bytes allocated
+==4013== 
+==4013== 8 bytes in 1 blocks are definitely lost in loss record 1 of 8
+==4013==    at 0x483BE63: operator new(unsigned long) (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==4013==    by 0x118426: searchEngFactory() (searcheng_tests.cpp:41)
+==4013==    by 0x1187FE: searchEngTestSetup() (searcheng_tests.cpp:66)
+==4013==    by 0x11CB8E: SearchEng_DiffCombiner_Test::TestBody() (searcheng_tests.cpp:199)
+==4013==    by 0x166410: HandleSehExceptionsInMethodIfSupported<testing::Test, void> (gtest.cc:2433)
+==4013==    by 0x166410: void testing::internal::HandleExceptionsInMethodIfSupported<testing::Test, void>(testing::Test*, void (testing::Test::*)(), char const*) (gtest.cc:2469)
+==4013==    by 0x15AAB5: Run (gtest.cc:2508)
+==4013==    by 0x15AAB5: testing::Test::Run() (gtest.cc:2498)
+==4013==    by 0x15AC14: Run (gtest.cc:2684)
+==4013==    by 0x15AC14: testing::TestInfo::Run() (gtest.cc:2657)
+==4013==    by 0x15ACFC: Run (gtest.cc:2816)
+==4013==    by 0x15ACFC: testing::TestSuite::Run() (gtest.cc:2795)
+==4013==    by 0x15B21B: testing::internal::UnitTestImpl::RunAllTests() (gtest.cc:5338)
+==4013==    by 0x166980: HandleSehExceptionsInMethodIfSupported<testing::internal::UnitTestImpl, bool> (gtest.cc:2433)
+==4013==    by 0x166980: bool testing::internal::HandleExceptionsInMethodIfSupported<testing::internal::UnitTestImpl, bool>(testing::internal::UnitTestImpl*, bool (testing::internal::UnitTestImpl::*)(), char const*) (gtest.cc:2469)
+==4013==    by 0x15B44B: testing::UnitTest::Run() (gtest.cc:4925)
+==4013==    by 0x117DC3: main (in /work/hw-nlicea/hw2/hw2_tests/searcheng_tests/searcheng_tests)
+==4013== 
+==4013== 8 bytes in 1 blocks are definitely lost in loss record 2 of 8
+==4013==    at 0x483BE63: operator new(unsigned long) (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==4013==    by 0x118497: searchEngFactory() (searcheng_tests.cpp:42)
+==4013==    by 0x1187FE: searchEngTestSetup() (searcheng_tests.cpp:66)
+==4013==    by 0x11CB8E: SearchEng_DiffCombiner_Test::TestBody() (searcheng_tests.cpp:199)
+==4013==    by 0x166410: HandleSehExceptionsInMethodIfSupported<testing::Test, void> (gtest.cc:2433)
+==4013==    by 0x166410: void testing::internal::HandleExceptionsInMethodIfSupported<testing::Test, void>(testing::Test*, void (testing::Test::*)(), char const*) (gtest.cc:2469)
+==4013==    by 0x15AAB5: Run (gtest.cc:2508)
+==4013==    by 0x15AAB5: testing::Test::Run() (gtest.cc:2498)
+==4013==    by 0x15AC14: Run (gtest.cc:2684)
+==4013==    by 0x15AC14: testing::TestInfo::Run() (gtest.cc:2657)
+==4013==    by 0x15ACFC: Run (gtest.cc:2816)
+==4013==    by 0x15ACFC: testing::TestSuite::Run() (gtest.cc:2795)
+==4013==    by 0x15B21B: testing::internal::UnitTestImpl::RunAllTests() (gtest.cc:5338)
+==4013==    by 0x166980: HandleSehExceptionsInMethodIfSupported<testing::internal::UnitTestImpl, bool> (gtest.cc:2433)
+==4013==    by 0x166980: bool testing::internal::HandleExceptionsInMethodIfSupported<testing::internal::UnitTestImpl, bool>(testing::internal::UnitTestImpl*, bool (testing::internal::UnitTestImpl::*)(), char const*) (gtest.cc:2469)
+==4013==    by 0x15B44B: testing::UnitTest::Run() (gtest.cc:4925)
+==4013==    by 0x117DC3: main (in /work/hw-nlicea/hw2/hw2_tests/searcheng_tests/searcheng_tests)
+==4013== 
+==4013== 304 (176 direct, 128 indirect) bytes in 1 blocks are definitely lost in loss record 6 of 8
+==4013==    at 0x483BE63: operator new(unsigned long) (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==4013==    by 0x130D48: SearchEng::read_page(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (searcheng.cpp:103)
+==4013==    by 0x11CC8B: SearchEng_DiffCombiner_Test::TestBody() (searcheng_tests.cpp:202)
+==4013==    by 0x166410: HandleSehExceptionsInMethodIfSupported<testing::Test, void> (gtest.cc:2433)
+==4013==    by 0x166410: void testing::internal::HandleExceptionsInMethodIfSupported<testing::Test, void>(testing::Test*, void (testing::Test::*)(), char const*) (gtest.cc:2469)
+==4013==    by 0x15AAB5: Run (gtest.cc:2508)
+==4013==    by 0x15AAB5: testing::Test::Run() (gtest.cc:2498)
+==4013==    by 0x15AC14: Run (gtest.cc:2684)
+==4013==    by 0x15AC14: testing::TestInfo::Run() (gtest.cc:2657)
+==4013==    by 0x15ACFC: Run (gtest.cc:2816)
+==4013==    by 0x15ACFC: testing::TestSuite::Run() (gtest.cc:2795)
+==4013==    by 0x15B21B: testing::internal::UnitTestImpl::RunAllTests() (gtest.cc:5338)
+==4013==    by 0x166980: HandleSehExceptionsInMethodIfSupported<testing::internal::UnitTestImpl, bool> (gtest.cc:2433)
+==4013==    by 0x166980: bool testing::internal::HandleExceptionsInMethodIfSupported<testing::internal::UnitTestImpl, bool>(testing::internal::UnitTestImpl*, bool (testing::internal::UnitTestImpl::*)(), char const*) (gtest.cc:2469)
+==4013==    by 0x15B44B: testing::UnitTest::Run() (gtest.cc:4925)
+==4013==    by 0x117DC3: main (in /work/hw-nlicea/hw2/hw2_tests/searcheng_tests/searcheng_tests)
+==4013== 
+==4013== 1,344 (704 direct, 640 indirect) bytes in 4 blocks are definitely lost in loss record 8 of 8
+==4013==    at 0x483BE63: operator new(unsigned long) (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==4013==    by 0x130D48: SearchEng::read_page(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (searcheng.cpp:103)
+==4013==    by 0x118AA4: searchEngTestSetup() (searcheng_tests.cpp:73)
+==4013==    by 0x11CB8E: SearchEng_DiffCombiner_Test::TestBody() (searcheng_tests.cpp:199)
+==4013==    by 0x166410: HandleSehExceptionsInMethodIfSupported<testing::Test, void> (gtest.cc:2433)
+==4013==    by 0x166410: void testing::internal::HandleExceptionsInMethodIfSupported<testing::Test, void>(testing::Test*, void (testing::Test::*)(), char const*) (gtest.cc:2469)
+==4013==    by 0x15AAB5: Run (gtest.cc:2508)
+==4013==    by 0x15AAB5: testing::Test::Run() (gtest.cc:2498)
+==4013==    by 0x15AC14: Run (gtest.cc:2684)
+==4013==    by 0x15AC14: testing::TestInfo::Run() (gtest.cc:2657)
+==4013==    by 0x15ACFC: Run (gtest.cc:2816)
+==4013==    by 0x15ACFC: testing::TestSuite::Run() (gtest.cc:2795)
+==4013==    by 0x15B21B: testing::internal::UnitTestImpl::RunAllTests() (gtest.cc:5338)
+==4013==    by 0x166980: HandleSehExceptionsInMethodIfSupported<testing::internal::UnitTestImpl, bool> (gtest.cc:2433)
+==4013==    by 0x166980: bool testing::internal::HandleExceptionsInMethodIfSupported<testing::internal::UnitTestImpl, bool>(testing::internal::UnitTestImpl*, bool (testing::internal::UnitTestImpl::*)(), char const*) (gtest.cc:2469)
+==4013==    by 0x15B44B: testing::UnitTest::Run() (gtest.cc:4925)
+==4013==    by 0x117DC3: main (in /work/hw-nlicea/hw2/hw2_tests/searcheng_tests/searcheng_tests)
+==4013== 
+==4013== LEAK SUMMARY:
+==4013==    definitely lost: 896 bytes in 7 blocks
+==4013==    indirectly lost: 768 bytes in 12 blocks
+==4013==      possibly lost: 0 bytes in 0 blocks
+==4013==    still reachable: 0 bytes in 0 blocks
+==4013==         suppressed: 0 bytes in 0 blocks
+==4013== 
+==4013== For lists of detected and suppressed errors, rerun with: -s
+==4013== ERROR SUMMARY: 14 errors from 6 contexts (suppressed: 0 from 0)
+<end of output>
+Test time =   1.02 sec
+----------------------------------------------------------
+Test Passed.
+"SearchEng.DiffCombiner" end time: Feb 12 07:01 UTC
+"SearchEng.DiffCombiner" time elapsed: 00:00:01
+----------------------------------------------------------
+
+6/9 Testing: SearchEng.RetrievePage
+6/9 Test: SearchEng.RetrievePage
+Command: "/usr/bin/valgrind" "--tool=memcheck" "--leak-check=yes" "--trace-children=no" "/work/hw-nlicea/hw2/hw2_tests/searcheng_tests/searcheng_tests" "--gtest_filter=SearchEng.RetrievePage"
+Directory: /work/hw-nlicea/hw2/hw2_tests/searcheng_tests
+"SearchEng.RetrievePage" start time: Feb 12 07:01 UTC
+Output:
+----------------------------------------------------------
+==4014== Memcheck, a memory error detector
+==4014== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==4014== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
+==4014== Command: /work/hw-nlicea/hw2/hw2_tests/searcheng_tests/searcheng_tests --gtest_filter=SearchEng.RetrievePage
+==4014== 
+Running main() from /build/googletest-j5yxiC/googletest-1.10.0/googletest/src/gtest_main.cc
+Note: Google Test filter = SearchEng.RetrievePage
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from SearchEng
+[ RUN      ] SearchEng.RetrievePage
+Checking links for page test-small/pga.md
+Expect outgoing outgoingLinks: [test-small/pgc.md, test-small/pgg.md] actual [test-small/pgc.md, test-small/pgg.md]
+Expect incoming outgoingLinks: [test-small/pgb.md] actual [test-small/pgb.md]
+Checking links for page test-small/pgb.md
+Expect outgoing outgoingLinks: [test-small/pga.md, test-small/pge.md, test-small/pgf.md] actual [test-small/pga.md, test-small/pge.md, test-small/pgf.md]
+Expect incoming outgoingLinks: [test-small/pgc.md] actual [test-small/pgc.md]
+Checking links for page test-small/pgc.md
+Expect outgoing outgoingLinks: [test-small/pgb.md] actual [test-small/pgb.md]
+Expect incoming outgoingLinks: [test-small/pga.md, test-small/pgd.md, test-small/pge.md] actual [test-small/pga.md, test-small/pgd.md, test-small/pge.md]
+Checking links for page test-small/pgd.md
+Expect outgoing outgoingLinks: [test-small/pgc.md] actual [test-small/pgc.md]
+Expect incoming outgoingLinks: [test-small/pge.md] actual [test-small/pge.md]
+Checking links for page test-small/pge.md
+Expect outgoing outgoingLinks: [test-small/pgc.md, test-small/pgd.md, test-small/pgf.md] actual [test-small/pgc.md, test-small/pgd.md, test-small/pgf.md]
+Expect incoming outgoingLinks: [test-small/pgb.md] actual [test-small/pgb.md]
+Checking links for page test-small/pgf.md
+Expect outgoing outgoingLinks: [] actual []
+Expect incoming outgoingLinks: [test-small/pgb.md, test-small/pge.md] actual [test-small/pgb.md, test-small/pge.md]
+Checking links for page test-small/pgg.md
+Expect outgoing outgoingLinks: [] actual []
+Expect incoming outgoingLinks: [test-small/pga.md] actual [test-small/pga.md]
+==4014== Invalid read of size 8
+==4014==    at 0x130793: SearchEng::~SearchEng() (searcheng.cpp:34)
+==4014==    by 0x125973: std::default_delete<SearchEng>::operator()(SearchEng*) const (unique_ptr.h:81)
+==4014==    by 0x123CC3: std::unique_ptr<SearchEng, std::default_delete<SearchEng> >::~unique_ptr() (unique_ptr.h:292)
+==4014==    by 0x11FAE5: SearchEng_RetrievePage_Test::TestBody() (searcheng_tests.cpp:227)
+==4014==    by 0x166410: HandleSehExceptionsInMethodIfSupported<testing::Test, void> (gtest.cc:2433)
+==4014==    by 0x166410: void testing::internal::HandleExceptionsInMethodIfSupported<testing::Test, void>(testing::Test*, void (testing::Test::*)(), char const*) (gtest.cc:2469)
+==4014==    by 0x15AAB5: Run (gtest.cc:2508)
+==4014==    by 0x15AAB5: testing::Test::Run() (gtest.cc:2498)
+==4014==    by 0x15AC14: Run (gtest.cc:2684)
+==4014==    by 0x15AC14: testing::TestInfo::Run() (gtest.cc:2657)
+==4014==    by 0x15ACFC: Run (gtest.cc:2816)
+==4014==    by 0x15ACFC: testing::TestSuite::Run() (gtest.cc:2795)
+==4014==    by 0x15B21B: testing::internal::UnitTestImpl::RunAllTests() (gtest.cc:5338)
+==4014==    by 0x166980: HandleSehExceptionsInMethodIfSupported<testing::internal::UnitTestImpl, bool> (gtest.cc:2433)
+==4014==    by 0x166980: bool testing::internal::HandleExceptionsInMethodIfSupported<testing::internal::UnitTestImpl, bool>(testing::internal::UnitTestImpl*, bool (testing::internal::UnitTestImpl::*)(), char const*) (gtest.cc:2469)
+==4014==    by 0x15B44B: testing::UnitTest::Run() (gtest.cc:4925)
+==4014==    by 0x117DC3: main (in /work/hw-nlicea/hw2/hw2_tests/searcheng_tests/searcheng_tests)
+==4014==  Address 0x4ddb6e8 is 8 bytes before a block of size 176 alloc'd
+==4014==    at 0x483BE63: operator new(unsigned long) (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==4014==    by 0x130D48: SearchEng::read_page(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (searcheng.cpp:103)
+==4014==    by 0x130A61: SearchEng::read_pages_from_index(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (searcheng.cpp:67)
+==4014==    by 0x11DC85: SearchEng_RetrievePage_Test::TestBody() (searcheng_tests.cpp:228)
+==4014==    by 0x166410: HandleSehExceptionsInMethodIfSupported<testing::Test, void> (gtest.cc:2433)
+==4014==    by 0x166410: void testing::internal::HandleExceptionsInMethodIfSupported<testing::Test, void>(testing::Test*, void (testing::Test::*)(), char const*) (gtest.cc:2469)
+==4014==    by 0x15AAB5: Run (gtest.cc:2508)
+==4014==    by 0x15AAB5: testing::Test::Run() (gtest.cc:2498)
+==4014==    by 0x15AC14: Run (gtest.cc:2684)
+==4014==    by 0x15AC14: testing::TestInfo::Run() (gtest.cc:2657)
+==4014==    by 0x15ACFC: Run (gtest.cc:2816)
+==4014==    by 0x15ACFC: testing::TestSuite::Run() (gtest.cc:2795)
+==4014==    by 0x15B21B: testing::internal::UnitTestImpl::RunAllTests() (gtest.cc:5338)
+==4014==    by 0x166980: HandleSehExceptionsInMethodIfSupported<testing::internal::UnitTestImpl, bool> (gtest.cc:2433)
+==4014==    by 0x166980: bool testing::internal::HandleExceptionsInMethodIfSupported<testing::internal::UnitTestImpl, bool>(testing::internal::UnitTestImpl*, bool (testing::internal::UnitTestImpl::*)(), char const*) (gtest.cc:2469)
+==4014==    by 0x15B44B: testing::UnitTest::Run() (gtest.cc:4925)
+==4014==    by 0x117DC3: main (in /work/hw-nlicea/hw2/hw2_tests/searcheng_tests/searcheng_tests)
+==4014== 
+==4014== Invalid free() / delete / delete[] / realloc()
+==4014==    at 0x483D74F: operator delete[](void*) (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==4014==    by 0x1307CF: SearchEng::~SearchEng() (searcheng.cpp:34)
+==4014==    by 0x125973: std::default_delete<SearchEng>::operator()(SearchEng*) const (unique_ptr.h:81)
+==4014==    by 0x123CC3: std::unique_ptr<SearchEng, std::default_delete<SearchEng> >::~unique_ptr() (unique_ptr.h:292)
+==4014==    by 0x11FAE5: SearchEng_RetrievePage_Test::TestBody() (searcheng_tests.cpp:227)
+==4014==    by 0x166410: HandleSehExceptionsInMethodIfSupported<testing::Test, void> (gtest.cc:2433)
+==4014==    by 0x166410: void testing::internal::HandleExceptionsInMethodIfSupported<testing::Test, void>(testing::Test*, void (testing::Test::*)(), char const*) (gtest.cc:2469)
+==4014==    by 0x15AAB5: Run (gtest.cc:2508)
+==4014==    by 0x15AAB5: testing::Test::Run() (gtest.cc:2498)
+==4014==    by 0x15AC14: Run (gtest.cc:2684)
+==4014==    by 0x15AC14: testing::TestInfo::Run() (gtest.cc:2657)
+==4014==    by 0x15ACFC: Run (gtest.cc:2816)
+==4014==    by 0x15ACFC: testing::TestSuite::Run() (gtest.cc:2795)
+==4014==    by 0x15B21B: testing::internal::UnitTestImpl::RunAllTests() (gtest.cc:5338)
+==4014==    by 0x166980: HandleSehExceptionsInMethodIfSupported<testing::internal::UnitTestImpl, bool> (gtest.cc:2433)
+==4014==    by 0x166980: bool testing::internal::HandleExceptionsInMethodIfSupported<testing::internal::UnitTestImpl, bool>(testing::internal::UnitTestImpl*, bool (testing::internal::UnitTestImpl::*)(), char const*) (gtest.cc:2469)
+==4014==    by 0x15B44B: testing::UnitTest::Run() (gtest.cc:4925)
+==4014==  Address 0x4ddb6e8 is 8 bytes before a block of size 176 alloc'd
+==4014==    at 0x483BE63: operator new(unsigned long) (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==4014==    by 0x130D48: SearchEng::read_page(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (searcheng.cpp:103)
+==4014==    by 0x130A61: SearchEng::read_pages_from_index(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (searcheng.cpp:67)
+==4014==    by 0x11DC85: SearchEng_RetrievePage_Test::TestBody() (searcheng_tests.cpp:228)
+==4014==    by 0x166410: HandleSehExceptionsInMethodIfSupported<testing::Test, void> (gtest.cc:2433)
+==4014==    by 0x166410: void testing::internal::HandleExceptionsInMethodIfSupported<testing::Test, void>(testing::Test*, void (testing::Test::*)(), char const*) (gtest.cc:2469)
+==4014==    by 0x15AAB5: Run (gtest.cc:2508)
+==4014==    by 0x15AAB5: testing::Test::Run() (gtest.cc:2498)
+==4014==    by 0x15AC14: Run (gtest.cc:2684)
+==4014==    by 0x15AC14: testing::TestInfo::Run() (gtest.cc:2657)
+==4014==    by 0x15ACFC: Run (gtest.cc:2816)
+==4014==    by 0x15ACFC: testing::TestSuite::Run() (gtest.cc:2795)
+==4014==    by 0x15B21B: testing::internal::UnitTestImpl::RunAllTests() (gtest.cc:5338)
+==4014==    by 0x166980: HandleSehExceptionsInMethodIfSupported<testing::internal::UnitTestImpl, bool> (gtest.cc:2433)
+==4014==    by 0x166980: bool testing::internal::HandleExceptionsInMethodIfSupported<testing::internal::UnitTestImpl, bool>(testing::internal::UnitTestImpl*, bool (testing::internal::UnitTestImpl::*)(), char const*) (gtest.cc:2469)
+==4014==    by 0x15B44B: testing::UnitTest::Run() (gtest.cc:4925)
+==4014==    by 0x117DC3: main (in /work/hw-nlicea/hw2/hw2_tests/searcheng_tests/searcheng_tests)
+==4014== 
+[       OK ] SearchEng.RetrievePage (195 ms)
+[----------] 1 test from SearchEng (201 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (219 ms total)
+[  PASSED  ] 1 test.
+==4014== 
+==4014== HEAP SUMMARY:
+==4014==     in use at exit: 7,364 bytes in 115 blocks
+==4014==   total heap usage: 947 allocs, 841 frees, 254,277 bytes allocated
+==4014== 
+==4014== 8 bytes in 1 blocks are definitely lost in loss record 1 of 29
+==4014==    at 0x483BE63: operator new(unsigned long) (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==4014==    by 0x118426: searchEngFactory() (searcheng_tests.cpp:41)
+==4014==    by 0x11DC32: SearchEng_RetrievePage_Test::TestBody() (searcheng_tests.cpp:227)
+==4014==    by 0x166410: HandleSehExceptionsInMethodIfSupported<testing::Test, void> (gtest.cc:2433)
+==4014==    by 0x166410: void testing::internal::HandleExceptionsInMethodIfSupported<testing::Test, void>(testing::Test*, void (testing::Test::*)(), char const*) (gtest.cc:2469)
+==4014==    by 0x15AAB5: Run (gtest.cc:2508)
+==4014==    by 0x15AAB5: testing::Test::Run() (gtest.cc:2498)
+==4014==    by 0x15AC14: Run (gtest.cc:2684)
+==4014==    by 0x15AC14: testing::TestInfo::Run() (gtest.cc:2657)
+==4014==    by 0x15ACFC: Run (gtest.cc:2816)
+==4014==    by 0x15ACFC: testing::TestSuite::Run() (gtest.cc:2795)
+==4014==    by 0x15B21B: testing::internal::UnitTestImpl::RunAllTests() (gtest.cc:5338)
+==4014==    by 0x166980: HandleSehExceptionsInMethodIfSupported<testing::internal::UnitTestImpl, bool> (gtest.cc:2433)
+==4014==    by 0x166980: bool testing::internal::HandleExceptionsInMethodIfSupported<testing::internal::UnitTestImpl, bool>(testing::internal::UnitTestImpl*, bool (testing::internal::UnitTestImpl::*)(), char const*) (gtest.cc:2469)
+==4014==    by 0x15B44B: testing::UnitTest::Run() (gtest.cc:4925)
+==4014==    by 0x117DC3: main (in /work/hw-nlicea/hw2/hw2_tests/searcheng_tests/searcheng_tests)
+==4014== 
+==4014== 8 bytes in 1 blocks are definitely lost in loss record 2 of 29
+==4014==    at 0x483BE63: operator new(unsigned long) (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==4014==    by 0x118497: searchEngFactory() (searcheng_tests.cpp:42)
+==4014==    by 0x11DC32: SearchEng_RetrievePage_Test::TestBody() (searcheng_tests.cpp:227)
+==4014==    by 0x166410: HandleSehExceptionsInMethodIfSupported<testing::Test, void> (gtest.cc:2433)
+==4014==    by 0x166410: void testing::internal::HandleExceptionsInMethodIfSupported<testing::Test, void>(testing::Test*, void (testing::Test::*)(), char const*) (gtest.cc:2469)
+==4014==    by 0x15AAB5: Run (gtest.cc:2508)
+==4014==    by 0x15AAB5: testing::Test::Run() (gtest.cc:2498)
+==4014==    by 0x15AC14: Run (gtest.cc:2684)
+==4014==    by 0x15AC14: testing::TestInfo::Run() (gtest.cc:2657)
+==4014==    by 0x15ACFC: Run (gtest.cc:2816)
+==4014==    by 0x15ACFC: testing::TestSuite::Run() (gtest.cc:2795)
+==4014==    by 0x15B21B: testing::internal::UnitTestImpl::RunAllTests() (gtest.cc:5338)
+==4014==    by 0x166980: HandleSehExceptionsInMethodIfSupported<testing::internal::UnitTestImpl, bool> (gtest.cc:2433)
+==4014==    by 0x166980: bool testing::internal::HandleExceptionsInMethodIfSupported<testing::internal::UnitTestImpl, bool>(testing::internal::UnitTestImpl*, bool (testing::internal::UnitTestImpl::*)(), char const*) (gtest.cc:2469)
+==4014==    by 0x15B44B: testing::UnitTest::Run() (gtest.cc:4925)
+==4014==    by 0x117DC3: main (in /work/hw-nlicea/hw2/hw2_tests/searcheng_tests/searcheng_tests)
+==4014== 
+==4014== 259 (176 direct, 83 indirect) bytes in 1 blocks are definitely lost in loss record 19 of 29
+==4014==    at 0x483BE63: operator new(unsigned long) (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==4014==    by 0x130D48: SearchEng::read_page(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (searcheng.cpp:103)
+==4014==    by 0x11F568: SearchEng_RetrievePage_Test::TestBody() (searcheng_tests.cpp:302)
+==4014==    by 0x166410: HandleSehExceptionsInMethodIfSupported<testing::Test, void> (gtest.cc:2433)
+==4014==    by 0x166410: void testing::internal::HandleExceptionsInMethodIfSupported<testing::Test, void>(testing::Test*, void (testing::Test::*)(), char const*) (gtest.cc:2469)
+==4014==    by 0x15AAB5: Run (gtest.cc:2508)
+==4014==    by 0x15AAB5: testing::Test::Run() (gtest.cc:2498)
+==4014==    by 0x15AC14: Run (gtest.cc:2684)
+==4014==    by 0x15AC14: testing::TestInfo::Run() (gtest.cc:2657)
+==4014==    by 0x15ACFC: Run (gtest.cc:2816)
+==4014==    by 0x15ACFC: testing::TestSuite::Run() (gtest.cc:2795)
+==4014==    by 0x15B21B: testing::internal::UnitTestImpl::RunAllTests() (gtest.cc:5338)
+==4014==    by 0x166980: HandleSehExceptionsInMethodIfSupported<testing::internal::UnitTestImpl, bool> (gtest.cc:2433)
+==4014==    by 0x166980: bool testing::internal::HandleExceptionsInMethodIfSupported<testing::internal::UnitTestImpl, bool>(testing::internal::UnitTestImpl*, bool (testing::internal::UnitTestImpl::*)(), char const*) (gtest.cc:2469)
+==4014==    by 0x15B44B: testing::UnitTest::Run() (gtest.cc:4925)
+==4014==    by 0x117DC3: main (in /work/hw-nlicea/hw2/hw2_tests/searcheng_tests/searcheng_tests)
+==4014== 
+==4014== 7,089 (352 direct, 6,737 indirect) bytes in 2 blocks are definitely lost in loss record 29 of 29
+==4014==    at 0x483BE63: operator new(unsigned long) (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==4014==    by 0x130D48: SearchEng::read_page(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (searcheng.cpp:103)
+==4014==    by 0x130A61: SearchEng::read_pages_from_index(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (searcheng.cpp:67)
+==4014==    by 0x11DC85: SearchEng_RetrievePage_Test::TestBody() (searcheng_tests.cpp:228)
+==4014==    by 0x166410: HandleSehExceptionsInMethodIfSupported<testing::Test, void> (gtest.cc:2433)
+==4014==    by 0x166410: void testing::internal::HandleExceptionsInMethodIfSupported<testing::Test, void>(testing::Test*, void (testing::Test::*)(), char const*) (gtest.cc:2469)
+==4014==    by 0x15AAB5: Run (gtest.cc:2508)
+==4014==    by 0x15AAB5: testing::Test::Run() (gtest.cc:2498)
+==4014==    by 0x15AC14: Run (gtest.cc:2684)
+==4014==    by 0x15AC14: testing::TestInfo::Run() (gtest.cc:2657)
+==4014==    by 0x15ACFC: Run (gtest.cc:2816)
+==4014==    by 0x15ACFC: testing::TestSuite::Run() (gtest.cc:2795)
+==4014==    by 0x15B21B: testing::internal::UnitTestImpl::RunAllTests() (gtest.cc:5338)
+==4014==    by 0x166980: HandleSehExceptionsInMethodIfSupported<testing::internal::UnitTestImpl, bool> (gtest.cc:2433)
+==4014==    by 0x166980: bool testing::internal::HandleExceptionsInMethodIfSupported<testing::internal::UnitTestImpl, bool>(testing::internal::UnitTestImpl*, bool (testing::internal::UnitTestImpl::*)(), char const*) (gtest.cc:2469)
+==4014==    by 0x15B44B: testing::UnitTest::Run() (gtest.cc:4925)
+==4014==    by 0x117DC3: main (in /work/hw-nlicea/hw2/hw2_tests/searcheng_tests/searcheng_tests)
+==4014== 
+==4014== LEAK SUMMARY:
+==4014==    definitely lost: 544 bytes in 5 blocks
+==4014==    indirectly lost: 6,820 bytes in 110 blocks
+==4014==      possibly lost: 0 bytes in 0 blocks
+==4014==    still reachable: 0 bytes in 0 blocks
+==4014==         suppressed: 0 bytes in 0 blocks
+==4014== 
+==4014== For lists of detected and suppressed errors, rerun with: -s
+==4014== ERROR SUMMARY: 22 errors from 6 contexts (suppressed: 0 from 0)
+<end of output>
+Test time =   1.02 sec
+----------------------------------------------------------
+Test Passed.
+"SearchEng.RetrievePage" end time: Feb 12 07:01 UTC
+"SearchEng.RetrievePage" time elapsed: 00:00:01
+----------------------------------------------------------
+
+7/9 Testing: SearchEng.LinkCornerCases
+7/9 Test: SearchEng.LinkCornerCases
+Command: "/usr/bin/valgrind" "--tool=memcheck" "--leak-check=yes" "--trace-children=no" "/work/hw-nlicea/hw2/hw2_tests/searcheng_tests/searcheng_tests" "--gtest_filter=SearchEng.LinkCornerCases"
+Directory: /work/hw-nlicea/hw2/hw2_tests/searcheng_tests
+"SearchEng.LinkCornerCases" start time: Feb 12 07:01 UTC
+Output:
+----------------------------------------------------------
+==4015== Memcheck, a memory error detector
+==4015== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==4015== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
+==4015== Command: /work/hw-nlicea/hw2/hw2_tests/searcheng_tests/searcheng_tests --gtest_filter=SearchEng.LinkCornerCases
+==4015== 
+Running main() from /build/googletest-j5yxiC/googletest-1.10.0/googletest/src/gtest_main.cc
+Note: Google Test filter = SearchEng.LinkCornerCases
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from SearchEng
+[ RUN      ] SearchEng.LinkCornerCases
+==4015== Invalid read of size 8
+==4015==    at 0x130793: SearchEng::~SearchEng() (searcheng.cpp:34)
+==4015==    by 0x125973: std::default_delete<SearchEng>::operator()(SearchEng*) const (unique_ptr.h:81)
+==4015==    by 0x123CC3: std::unique_ptr<SearchEng, std::default_delete<SearchEng> >::~unique_ptr() (unique_ptr.h:292)
+==4015==    by 0x120D4E: SearchEng_LinkCornerCases_Test::TestBody() (searcheng_tests.cpp:314)
+==4015==    by 0x166410: HandleSehExceptionsInMethodIfSupported<testing::Test, void> (gtest.cc:2433)
+==4015==    by 0x166410: void testing::internal::HandleExceptionsInMethodIfSupported<testing::Test, void>(testing::Test*, void (testing::Test::*)(), char const*) (gtest.cc:2469)
+==4015==    by 0x15AAB5: Run (gtest.cc:2508)
+==4015==    by 0x15AAB5: testing::Test::Run() (gtest.cc:2498)
+==4015==    by 0x15AC14: Run (gtest.cc:2684)
+==4015==    by 0x15AC14: testing::TestInfo::Run() (gtest.cc:2657)
+==4015==    by 0x15ACFC: Run (gtest.cc:2816)
+==4015==    by 0x15ACFC: testing::TestSuite::Run() (gtest.cc:2795)
+==4015==    by 0x15B21B: testing::internal::UnitTestImpl::RunAllTests() (gtest.cc:5338)
+==4015==    by 0x166980: HandleSehExceptionsInMethodIfSupported<testing::internal::UnitTestImpl, bool> (gtest.cc:2433)
+==4015==    by 0x166980: bool testing::internal::HandleExceptionsInMethodIfSupported<testing::internal::UnitTestImpl, bool>(testing::internal::UnitTestImpl*, bool (testing::internal::UnitTestImpl::*)(), char const*) (gtest.cc:2469)
+==4015==    by 0x15B44B: testing::UnitTest::Run() (gtest.cc:4925)
+==4015==    by 0x117DC3: main (in /work/hw-nlicea/hw2/hw2_tests/searcheng_tests/searcheng_tests)
+==4015==  Address 0x4ddac28 is 8 bytes before a block of size 176 alloc'd
+==4015==    at 0x483BE63: operator new(unsigned long) (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==4015==    by 0x130D48: SearchEng::read_page(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (searcheng.cpp:103)
+==4015==    by 0x120826: SearchEng_LinkCornerCases_Test::TestBody() (searcheng_tests.cpp:317)
+==4015==    by 0x166410: HandleSehExceptionsInMethodIfSupported<testing::Test, void> (gtest.cc:2433)
+==4015==    by 0x166410: void testing::internal::HandleExceptionsInMethodIfSupported<testing::Test, void>(testing::Test*, void (testing::Test::*)(), char const*) (gtest.cc:2469)
+==4015==    by 0x15AAB5: Run (gtest.cc:2508)
+==4015==    by 0x15AAB5: testing::Test::Run() (gtest.cc:2498)
+==4015==    by 0x15AC14: Run (gtest.cc:2684)
+==4015==    by 0x15AC14: testing::TestInfo::Run() (gtest.cc:2657)
+==4015==    by 0x15ACFC: Run (gtest.cc:2816)
+==4015==    by 0x15ACFC: testing::TestSuite::Run() (gtest.cc:2795)
+==4015==    by 0x15B21B: testing::internal::UnitTestImpl::RunAllTests() (gtest.cc:5338)
+==4015==    by 0x166980: HandleSehExceptionsInMethodIfSupported<testing::internal::UnitTestImpl, bool> (gtest.cc:2433)
+==4015==    by 0x166980: bool testing::internal::HandleExceptionsInMethodIfSupported<testing::internal::UnitTestImpl, bool>(testing::internal::UnitTestImpl*, bool (testing::internal::UnitTestImpl::*)(), char const*) (gtest.cc:2469)
+==4015==    by 0x15B44B: testing::UnitTest::Run() (gtest.cc:4925)
+==4015==    by 0x117DC3: main (in /work/hw-nlicea/hw2/hw2_tests/searcheng_tests/searcheng_tests)
+==4015== 
+==4015== Invalid free() / delete / delete[] / realloc()
+==4015==    at 0x483D74F: operator delete[](void*) (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==4015==    by 0x1307CF: SearchEng::~SearchEng() (searcheng.cpp:34)
+==4015==    by 0x125973: std::default_delete<SearchEng>::operator()(SearchEng*) const (unique_ptr.h:81)
+==4015==    by 0x123CC3: std::unique_ptr<SearchEng, std::default_delete<SearchEng> >::~unique_ptr() (unique_ptr.h:292)
+==4015==    by 0x120D4E: SearchEng_LinkCornerCases_Test::TestBody() (searcheng_tests.cpp:314)
+==4015==    by 0x166410: HandleSehExceptionsInMethodIfSupported<testing::Test, void> (gtest.cc:2433)
+==4015==    by 0x166410: void testing::internal::HandleExceptionsInMethodIfSupported<testing::Test, void>(testing::Test*, void (testing::Test::*)(), char const*) (gtest.cc:2469)
+==4015==    by 0x15AAB5: Run (gtest.cc:2508)
+==4015==    by 0x15AAB5: testing::Test::Run() (gtest.cc:2498)
+==4015==    by 0x15AC14: Run (gtest.cc:2684)
+==4015==    by 0x15AC14: testing::TestInfo::Run() (gtest.cc:2657)
+==4015==    by 0x15ACFC: Run (gtest.cc:2816)
+==4015==    by 0x15ACFC: testing::TestSuite::Run() (gtest.cc:2795)
+==4015==    by 0x15B21B: testing::internal::UnitTestImpl::RunAllTests() (gtest.cc:5338)
+==4015==    by 0x166980: HandleSehExceptionsInMethodIfSupported<testing::internal::UnitTestImpl, bool> (gtest.cc:2433)
+==4015==    by 0x166980: bool testing::internal::HandleExceptionsInMethodIfSupported<testing::internal::UnitTestImpl, bool>(testing::internal::UnitTestImpl*, bool (testing::internal::UnitTestImpl::*)(), char const*) (gtest.cc:2469)
+==4015==    by 0x15B44B: testing::UnitTest::Run() (gtest.cc:4925)
+==4015==  Address 0x4ddac28 is 8 bytes before a block of size 176 alloc'd
+==4015==    at 0x483BE63: operator new(unsigned long) (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==4015==    by 0x130D48: SearchEng::read_page(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (searcheng.cpp:103)
+==4015==    by 0x120826: SearchEng_LinkCornerCases_Test::TestBody() (searcheng_tests.cpp:317)
+==4015==    by 0x166410: HandleSehExceptionsInMethodIfSupported<testing::Test, void> (gtest.cc:2433)
+==4015==    by 0x166410: void testing::internal::HandleExceptionsInMethodIfSupported<testing::Test, void>(testing::Test*, void (testing::Test::*)(), char const*) (gtest.cc:2469)
+==4015==    by 0x15AAB5: Run (gtest.cc:2508)
+==4015==    by 0x15AAB5: testing::Test::Run() (gtest.cc:2498)
+==4015==    by 0x15AC14: Run (gtest.cc:2684)
+==4015==    by 0x15AC14: testing::TestInfo::Run() (gtest.cc:2657)
+==4015==    by 0x15ACFC: Run (gtest.cc:2816)
+==4015==    by 0x15ACFC: testing::TestSuite::Run() (gtest.cc:2795)
+==4015==    by 0x15B21B: testing::internal::UnitTestImpl::RunAllTests() (gtest.cc:5338)
+==4015==    by 0x166980: HandleSehExceptionsInMethodIfSupported<testing::internal::UnitTestImpl, bool> (gtest.cc:2433)
+==4015==    by 0x166980: bool testing::internal::HandleExceptionsInMethodIfSupported<testing::internal::UnitTestImpl, bool>(testing::internal::UnitTestImpl*, bool (testing::internal::UnitTestImpl::*)(), char const*) (gtest.cc:2469)
+==4015==    by 0x15B44B: testing::UnitTest::Run() (gtest.cc:4925)
+==4015==    by 0x117DC3: main (in /work/hw-nlicea/hw2/hw2_tests/searcheng_tests/searcheng_tests)
+==4015== 
+[       OK ] SearchEng.LinkCornerCases (108 ms)
+[----------] 1 test from SearchEng (112 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (129 ms total)
+[  PASSED  ] 1 test.
+==4015== 
+==4015== HEAP SUMMARY:
+==4015==     in use at exit: 354 bytes in 7 blocks
+==4015==   total heap usage: 290 allocs, 284 frees, 138,884 bytes allocated
+==4015== 
+==4015== 8 bytes in 1 blocks are definitely lost in loss record 1 of 7
+==4015==    at 0x483BE63: operator new(unsigned long) (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==4015==    by 0x118426: searchEngFactory() (searcheng_tests.cpp:41)
+==4015==    by 0x120776: SearchEng_LinkCornerCases_Test::TestBody() (searcheng_tests.cpp:314)
+==4015==    by 0x166410: HandleSehExceptionsInMethodIfSupported<testing::Test, void> (gtest.cc:2433)
+==4015==    by 0x166410: void testing::internal::HandleExceptionsInMethodIfSupported<testing::Test, void>(testing::Test*, void (testing::Test::*)(), char const*) (gtest.cc:2469)
+==4015==    by 0x15AAB5: Run (gtest.cc:2508)
+==4015==    by 0x15AAB5: testing::Test::Run() (gtest.cc:2498)
+==4015==    by 0x15AC14: Run (gtest.cc:2684)
+==4015==    by 0x15AC14: testing::TestInfo::Run() (gtest.cc:2657)
+==4015==    by 0x15ACFC: Run (gtest.cc:2816)
+==4015==    by 0x15ACFC: testing::TestSuite::Run() (gtest.cc:2795)
+==4015==    by 0x15B21B: testing::internal::UnitTestImpl::RunAllTests() (gtest.cc:5338)
+==4015==    by 0x166980: HandleSehExceptionsInMethodIfSupported<testing::internal::UnitTestImpl, bool> (gtest.cc:2433)
+==4015==    by 0x166980: bool testing::internal::HandleExceptionsInMethodIfSupported<testing::internal::UnitTestImpl, bool>(testing::internal::UnitTestImpl*, bool (testing::internal::UnitTestImpl::*)(), char const*) (gtest.cc:2469)
+==4015==    by 0x15B44B: testing::UnitTest::Run() (gtest.cc:4925)
+==4015==    by 0x117DC3: main (in /work/hw-nlicea/hw2/hw2_tests/searcheng_tests/searcheng_tests)
+==4015== 
+==4015== 8 bytes in 1 blocks are definitely lost in loss record 2 of 7
+==4015==    at 0x483BE63: operator new(unsigned long) (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==4015==    by 0x118497: searchEngFactory() (searcheng_tests.cpp:42)
+==4015==    by 0x120776: SearchEng_LinkCornerCases_Test::TestBody() (searcheng_tests.cpp:314)
+==4015==    by 0x166410: HandleSehExceptionsInMethodIfSupported<testing::Test, void> (gtest.cc:2433)
+==4015==    by 0x166410: void testing::internal::HandleExceptionsInMethodIfSupported<testing::Test, void>(testing::Test*, void (testing::Test::*)(), char const*) (gtest.cc:2469)
+==4015==    by 0x15AAB5: Run (gtest.cc:2508)
+==4015==    by 0x15AAB5: testing::Test::Run() (gtest.cc:2498)
+==4015==    by 0x15AC14: Run (gtest.cc:2684)
+==4015==    by 0x15AC14: testing::TestInfo::Run() (gtest.cc:2657)
+==4015==    by 0x15ACFC: Run (gtest.cc:2816)
+==4015==    by 0x15ACFC: testing::TestSuite::Run() (gtest.cc:2795)
+==4015==    by 0x15B21B: testing::internal::UnitTestImpl::RunAllTests() (gtest.cc:5338)
+==4015==    by 0x166980: HandleSehExceptionsInMethodIfSupported<testing::internal::UnitTestImpl, bool> (gtest.cc:2433)
+==4015==    by 0x166980: bool testing::internal::HandleExceptionsInMethodIfSupported<testing::internal::UnitTestImpl, bool>(testing::internal::UnitTestImpl*, bool (testing::internal::UnitTestImpl::*)(), char const*) (gtest.cc:2469)
+==4015==    by 0x15B44B: testing::UnitTest::Run() (gtest.cc:4925)
+==4015==    by 0x117DC3: main (in /work/hw-nlicea/hw2/hw2_tests/searcheng_tests/searcheng_tests)
+==4015== 
+==4015== 338 (176 direct, 162 indirect) bytes in 1 blocks are definitely lost in loss record 7 of 7
+==4015==    at 0x483BE63: operator new(unsigned long) (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==4015==    by 0x130D48: SearchEng::read_page(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (searcheng.cpp:103)
+==4015==    by 0x120826: SearchEng_LinkCornerCases_Test::TestBody() (searcheng_tests.cpp:317)
+==4015==    by 0x166410: HandleSehExceptionsInMethodIfSupported<testing::Test, void> (gtest.cc:2433)
+==4015==    by 0x166410: void testing::internal::HandleExceptionsInMethodIfSupported<testing::Test, void>(testing::Test*, void (testing::Test::*)(), char const*) (gtest.cc:2469)
+==4015==    by 0x15AAB5: Run (gtest.cc:2508)
+==4015==    by 0x15AAB5: testing::Test::Run() (gtest.cc:2498)
+==4015==    by 0x15AC14: Run (gtest.cc:2684)
+==4015==    by 0x15AC14: testing::TestInfo::Run() (gtest.cc:2657)
+==4015==    by 0x15ACFC: Run (gtest.cc:2816)
+==4015==    by 0x15ACFC: testing::TestSuite::Run() (gtest.cc:2795)
+==4015==    by 0x15B21B: testing::internal::UnitTestImpl::RunAllTests() (gtest.cc:5338)
+==4015==    by 0x166980: HandleSehExceptionsInMethodIfSupported<testing::internal::UnitTestImpl, bool> (gtest.cc:2433)
+==4015==    by 0x166980: bool testing::internal::HandleExceptionsInMethodIfSupported<testing::internal::UnitTestImpl, bool>(testing::internal::UnitTestImpl*, bool (testing::internal::UnitTestImpl::*)(), char const*) (gtest.cc:2469)
+==4015==    by 0x15B44B: testing::UnitTest::Run() (gtest.cc:4925)
+==4015==    by 0x117DC3: main (in /work/hw-nlicea/hw2/hw2_tests/searcheng_tests/searcheng_tests)
+==4015== 
+==4015== LEAK SUMMARY:
+==4015==    definitely lost: 192 bytes in 3 blocks
+==4015==    indirectly lost: 162 bytes in 4 blocks
+==4015==      possibly lost: 0 bytes in 0 blocks
+==4015==    still reachable: 0 bytes in 0 blocks
+==4015==         suppressed: 0 bytes in 0 blocks
+==4015== 
+==4015== For lists of detected and suppressed errors, rerun with: -s
+==4015== ERROR SUMMARY: 5 errors from 5 contexts (suppressed: 0 from 0)
+<end of output>
+Test time =   0.97 sec
+----------------------------------------------------------
+Test Passed.
+"SearchEng.LinkCornerCases" end time: Feb 12 07:01 UTC
+"SearchEng.LinkCornerCases" time elapsed: 00:00:00
+----------------------------------------------------------
+
+8/9 Testing: SearchEng.SameLink
+8/9 Test: SearchEng.SameLink
+Command: "/usr/bin/valgrind" "--tool=memcheck" "--leak-check=yes" "--trace-children=no" "/work/hw-nlicea/hw2/hw2_tests/searcheng_tests/searcheng_tests" "--gtest_filter=SearchEng.SameLink"
+Directory: /work/hw-nlicea/hw2/hw2_tests/searcheng_tests
+"SearchEng.SameLink" start time: Feb 12 07:01 UTC
+Output:
+----------------------------------------------------------
+==4016== Memcheck, a memory error detector
+==4016== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==4016== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
+==4016== Command: /work/hw-nlicea/hw2/hw2_tests/searcheng_tests/searcheng_tests --gtest_filter=SearchEng.SameLink
+==4016== 
+Running main() from /build/googletest-j5yxiC/googletest-1.10.0/googletest/src/gtest_main.cc
+Note: Google Test filter = SearchEng.SameLink
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from SearchEng
+[ RUN      ] SearchEng.SameLink
+==4016== Invalid read of size 8
+==4016==    at 0x130793: SearchEng::~SearchEng() (searcheng.cpp:34)
+==4016==    by 0x125973: std::default_delete<SearchEng>::operator()(SearchEng*) const (unique_ptr.h:81)
+==4016==    by 0x123CC3: std::unique_ptr<SearchEng, std::default_delete<SearchEng> >::~unique_ptr() (unique_ptr.h:292)
+==4016==    by 0x12188E: SearchEng_SameLink_Test::TestBody() (searcheng_tests.cpp:328)
+==4016==    by 0x166410: HandleSehExceptionsInMethodIfSupported<testing::Test, void> (gtest.cc:2433)
+==4016==    by 0x166410: void testing::internal::HandleExceptionsInMethodIfSupported<testing::Test, void>(testing::Test*, void (testing::Test::*)(), char const*) (gtest.cc:2469)
+==4016==    by 0x15AAB5: Run (gtest.cc:2508)
+==4016==    by 0x15AAB5: testing::Test::Run() (gtest.cc:2498)
+==4016==    by 0x15AC14: Run (gtest.cc:2684)
+==4016==    by 0x15AC14: testing::TestInfo::Run() (gtest.cc:2657)
+==4016==    by 0x15ACFC: Run (gtest.cc:2816)
+==4016==    by 0x15ACFC: testing::TestSuite::Run() (gtest.cc:2795)
+==4016==    by 0x15B21B: testing::internal::UnitTestImpl::RunAllTests() (gtest.cc:5338)
+==4016==    by 0x166980: HandleSehExceptionsInMethodIfSupported<testing::internal::UnitTestImpl, bool> (gtest.cc:2433)
+==4016==    by 0x166980: bool testing::internal::HandleExceptionsInMethodIfSupported<testing::internal::UnitTestImpl, bool>(testing::internal::UnitTestImpl*, bool (testing::internal::UnitTestImpl::*)(), char const*) (gtest.cc:2469)
+==4016==    by 0x15B44B: testing::UnitTest::Run() (gtest.cc:4925)
+==4016==    by 0x117DC3: main (in /work/hw-nlicea/hw2/hw2_tests/searcheng_tests/searcheng_tests)
+==4016==  Address 0x4e8db98 is 8 bytes before a block of size 176 alloc'd
+==4016==    at 0x483BE63: operator new(unsigned long) (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==4016==    by 0x130D48: SearchEng::read_page(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (searcheng.cpp:103)
+==4016==    by 0x121193: SearchEng_SameLink_Test::TestBody() (searcheng_tests.cpp:337)
+==4016==    by 0x166410: HandleSehExceptionsInMethodIfSupported<testing::Test, void> (gtest.cc:2433)
+==4016==    by 0x166410: void testing::internal::HandleExceptionsInMethodIfSupported<testing::Test, void>(testing::Test*, void (testing::Test::*)(), char const*) (gtest.cc:2469)
+==4016==    by 0x15AAB5: Run (gtest.cc:2508)
+==4016==    by 0x15AAB5: testing::Test::Run() (gtest.cc:2498)
+==4016==    by 0x15AC14: Run (gtest.cc:2684)
+==4016==    by 0x15AC14: testing::TestInfo::Run() (gtest.cc:2657)
+==4016==    by 0x15ACFC: Run (gtest.cc:2816)
+==4016==    by 0x15ACFC: testing::TestSuite::Run() (gtest.cc:2795)
+==4016==    by 0x15B21B: testing::internal::UnitTestImpl::RunAllTests() (gtest.cc:5338)
+==4016==    by 0x166980: HandleSehExceptionsInMethodIfSupported<testing::internal::UnitTestImpl, bool> (gtest.cc:2433)
+==4016==    by 0x166980: bool testing::internal::HandleExceptionsInMethodIfSupported<testing::internal::UnitTestImpl, bool>(testing::internal::UnitTestImpl*, bool (testing::internal::UnitTestImpl::*)(), char const*) (gtest.cc:2469)
+==4016==    by 0x15B44B: testing::UnitTest::Run() (gtest.cc:4925)
+==4016==    by 0x117DC3: main (in /work/hw-nlicea/hw2/hw2_tests/searcheng_tests/searcheng_tests)
+==4016== 
+==4016== Invalid free() / delete / delete[] / realloc()
+==4016==    at 0x483D74F: operator delete[](void*) (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==4016==    by 0x1307CF: SearchEng::~SearchEng() (searcheng.cpp:34)
+==4016==    by 0x125973: std::default_delete<SearchEng>::operator()(SearchEng*) const (unique_ptr.h:81)
+==4016==    by 0x123CC3: std::unique_ptr<SearchEng, std::default_delete<SearchEng> >::~unique_ptr() (unique_ptr.h:292)
+==4016==    by 0x12188E: SearchEng_SameLink_Test::TestBody() (searcheng_tests.cpp:328)
+==4016==    by 0x166410: HandleSehExceptionsInMethodIfSupported<testing::Test, void> (gtest.cc:2433)
+==4016==    by 0x166410: void testing::internal::HandleExceptionsInMethodIfSupported<testing::Test, void>(testing::Test*, void (testing::Test::*)(), char const*) (gtest.cc:2469)
+==4016==    by 0x15AAB5: Run (gtest.cc:2508)
+==4016==    by 0x15AAB5: testing::Test::Run() (gtest.cc:2498)
+==4016==    by 0x15AC14: Run (gtest.cc:2684)
+==4016==    by 0x15AC14: testing::TestInfo::Run() (gtest.cc:2657)
+==4016==    by 0x15ACFC: Run (gtest.cc:2816)
+==4016==    by 0x15ACFC: testing::TestSuite::Run() (gtest.cc:2795)
+==4016==    by 0x15B21B: testing::internal::UnitTestImpl::RunAllTests() (gtest.cc:5338)
+==4016==    by 0x166980: HandleSehExceptionsInMethodIfSupported<testing::internal::UnitTestImpl, bool> (gtest.cc:2433)
+==4016==    by 0x166980: bool testing::internal::HandleExceptionsInMethodIfSupported<testing::internal::UnitTestImpl, bool>(testing::internal::UnitTestImpl*, bool (testing::internal::UnitTestImpl::*)(), char const*) (gtest.cc:2469)
+==4016==    by 0x15B44B: testing::UnitTest::Run() (gtest.cc:4925)
+==4016==  Address 0x4e8db98 is 8 bytes before a block of size 176 alloc'd
+==4016==    at 0x483BE63: operator new(unsigned long) (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==4016==    by 0x130D48: SearchEng::read_page(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (searcheng.cpp:103)
+==4016==    by 0x121193: SearchEng_SameLink_Test::TestBody() (searcheng_tests.cpp:337)
+==4016==    by 0x166410: HandleSehExceptionsInMethodIfSupported<testing::Test, void> (gtest.cc:2433)
+==4016==    by 0x166410: void testing::internal::HandleExceptionsInMethodIfSupported<testing::Test, void>(testing::Test*, void (testing::Test::*)(), char const*) (gtest.cc:2469)
+==4016==    by 0x15AAB5: Run (gtest.cc:2508)
+==4016==    by 0x15AAB5: testing::Test::Run() (gtest.cc:2498)
+==4016==    by 0x15AC14: Run (gtest.cc:2684)
+==4016==    by 0x15AC14: testing::TestInfo::Run() (gtest.cc:2657)
+==4016==    by 0x15ACFC: Run (gtest.cc:2816)
+==4016==    by 0x15ACFC: testing::TestSuite::Run() (gtest.cc:2795)
+==4016==    by 0x15B21B: testing::internal::UnitTestImpl::RunAllTests() (gtest.cc:5338)
+==4016==    by 0x166980: HandleSehExceptionsInMethodIfSupported<testing::internal::UnitTestImpl, bool> (gtest.cc:2433)
+==4016==    by 0x166980: bool testing::internal::HandleExceptionsInMethodIfSupported<testing::internal::UnitTestImpl, bool>(testing::internal::UnitTestImpl*, bool (testing::internal::UnitTestImpl::*)(), char const*) (gtest.cc:2469)
+==4016==    by 0x15B44B: testing::UnitTest::Run() (gtest.cc:4925)
+==4016==    by 0x117DC3: main (in /work/hw-nlicea/hw2/hw2_tests/searcheng_tests/searcheng_tests)
+==4016== 
+[       OK ] SearchEng.SameLink (669 ms)
+[----------] 1 test from SearchEng (675 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (691 ms total)
+[  PASSED  ] 1 test.
+==4016== 
+==4016== HEAP SUMMARY:
+==4016==     in use at exit: 512 bytes in 7 blocks
+==4016==   total heap usage: 298 allocs, 293 frees, 871,383 bytes allocated
+==4016== 
+==4016== 8 bytes in 1 blocks are definitely lost in loss record 1 of 7
+==4016==    at 0x483BE63: operator new(unsigned long) (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==4016==    by 0x118426: searchEngFactory() (searcheng_tests.cpp:41)
+==4016==    by 0x121002: SearchEng_SameLink_Test::TestBody() (searcheng_tests.cpp:328)
+==4016==    by 0x166410: HandleSehExceptionsInMethodIfSupported<testing::Test, void> (gtest.cc:2433)
+==4016==    by 0x166410: void testing::internal::HandleExceptionsInMethodIfSupported<testing::Test, void>(testing::Test*, void (testing::Test::*)(), char const*) (gtest.cc:2469)
+==4016==    by 0x15AAB5: Run (gtest.cc:2508)
+==4016==    by 0x15AAB5: testing::Test::Run() (gtest.cc:2498)
+==4016==    by 0x15AC14: Run (gtest.cc:2684)
+==4016==    by 0x15AC14: testing::TestInfo::Run() (gtest.cc:2657)
+==4016==    by 0x15ACFC: Run (gtest.cc:2816)
+==4016==    by 0x15ACFC: testing::TestSuite::Run() (gtest.cc:2795)
+==4016==    by 0x15B21B: testing::internal::UnitTestImpl::RunAllTests() (gtest.cc:5338)
+==4016==    by 0x166980: HandleSehExceptionsInMethodIfSupported<testing::internal::UnitTestImpl, bool> (gtest.cc:2433)
+==4016==    by 0x166980: bool testing::internal::HandleExceptionsInMethodIfSupported<testing::internal::UnitTestImpl, bool>(testing::internal::UnitTestImpl*, bool (testing::internal::UnitTestImpl::*)(), char const*) (gtest.cc:2469)
+==4016==    by 0x15B44B: testing::UnitTest::Run() (gtest.cc:4925)
+==4016==    by 0x117DC3: main (in /work/hw-nlicea/hw2/hw2_tests/searcheng_tests/searcheng_tests)
+==4016== 
+==4016== 8 bytes in 1 blocks are definitely lost in loss record 2 of 7
+==4016==    at 0x483BE63: operator new(unsigned long) (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==4016==    by 0x118497: searchEngFactory() (searcheng_tests.cpp:42)
+==4016==    by 0x121002: SearchEng_SameLink_Test::TestBody() (searcheng_tests.cpp:328)
+==4016==    by 0x166410: HandleSehExceptionsInMethodIfSupported<testing::Test, void> (gtest.cc:2433)
+==4016==    by 0x166410: void testing::internal::HandleExceptionsInMethodIfSupported<testing::Test, void>(testing::Test*, void (testing::Test::*)(), char const*) (gtest.cc:2469)
+==4016==    by 0x15AAB5: Run (gtest.cc:2508)
+==4016==    by 0x15AAB5: testing::Test::Run() (gtest.cc:2498)
+==4016==    by 0x15AC14: Run (gtest.cc:2684)
+==4016==    by 0x15AC14: testing::TestInfo::Run() (gtest.cc:2657)
+==4016==    by 0x15ACFC: Run (gtest.cc:2816)
+==4016==    by 0x15ACFC: testing::TestSuite::Run() (gtest.cc:2795)
+==4016==    by 0x15B21B: testing::internal::UnitTestImpl::RunAllTests() (gtest.cc:5338)
+==4016==    by 0x166980: HandleSehExceptionsInMethodIfSupported<testing::internal::UnitTestImpl, bool> (gtest.cc:2433)
+==4016==    by 0x166980: bool testing::internal::HandleExceptionsInMethodIfSupported<testing::internal::UnitTestImpl, bool>(testing::internal::UnitTestImpl*, bool (testing::internal::UnitTestImpl::*)(), char const*) (gtest.cc:2469)
+==4016==    by 0x15B44B: testing::UnitTest::Run() (gtest.cc:4925)
+==4016==    by 0x117DC3: main (in /work/hw-nlicea/hw2/hw2_tests/searcheng_tests/searcheng_tests)
+==4016== 
+==4016== 496 (176 direct, 320 indirect) bytes in 1 blocks are definitely lost in loss record 7 of 7
+==4016==    at 0x483BE63: operator new(unsigned long) (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==4016==    by 0x130D48: SearchEng::read_page(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (searcheng.cpp:103)
+==4016==    by 0x121193: SearchEng_SameLink_Test::TestBody() (searcheng_tests.cpp:337)
+==4016==    by 0x166410: HandleSehExceptionsInMethodIfSupported<testing::Test, void> (gtest.cc:2433)
+==4016==    by 0x166410: void testing::internal::HandleExceptionsInMethodIfSupported<testing::Test, void>(testing::Test*, void (testing::Test::*)(), char const*) (gtest.cc:2469)
+==4016==    by 0x15AAB5: Run (gtest.cc:2508)
+==4016==    by 0x15AAB5: testing::Test::Run() (gtest.cc:2498)
+==4016==    by 0x15AC14: Run (gtest.cc:2684)
+==4016==    by 0x15AC14: testing::TestInfo::Run() (gtest.cc:2657)
+==4016==    by 0x15ACFC: Run (gtest.cc:2816)
+==4016==    by 0x15ACFC: testing::TestSuite::Run() (gtest.cc:2795)
+==4016==    by 0x15B21B: testing::internal::UnitTestImpl::RunAllTests() (gtest.cc:5338)
+==4016==    by 0x166980: HandleSehExceptionsInMethodIfSupported<testing::internal::UnitTestImpl, bool> (gtest.cc:2433)
+==4016==    by 0x166980: bool testing::internal::HandleExceptionsInMethodIfSupported<testing::internal::UnitTestImpl, bool>(testing::internal::UnitTestImpl*, bool (testing::internal::UnitTestImpl::*)(), char const*) (gtest.cc:2469)
+==4016==    by 0x15B44B: testing::UnitTest::Run() (gtest.cc:4925)
+==4016==    by 0x117DC3: main (in /work/hw-nlicea/hw2/hw2_tests/searcheng_tests/searcheng_tests)
+==4016== 
+==4016== LEAK SUMMARY:
+==4016==    definitely lost: 192 bytes in 3 blocks
+==4016==    indirectly lost: 320 bytes in 4 blocks
+==4016==      possibly lost: 0 bytes in 0 blocks
+==4016==    still reachable: 0 bytes in 0 blocks
+==4016==         suppressed: 0 bytes in 0 blocks
+==4016== 
+==4016== For lists of detected and suppressed errors, rerun with: -s
+==4016== ERROR SUMMARY: 7 errors from 5 contexts (suppressed: 0 from 0)
+<end of output>
+Test time =   1.48 sec
+----------------------------------------------------------
+Test Passed.
+"SearchEng.SameLink" end time: Feb 12 07:01 UTC
+"SearchEng.SameLink" time elapsed: 00:00:01
+----------------------------------------------------------
+
+9/9 Testing: SearchEng.DisplayPage
+9/9 Test: SearchEng.DisplayPage
+Command: "/usr/bin/valgrind" "--tool=memcheck" "--leak-check=yes" "--trace-children=no" "/work/hw-nlicea/hw2/hw2_tests/searcheng_tests/searcheng_tests" "--gtest_filter=SearchEng.DisplayPage"
+Directory: /work/hw-nlicea/hw2/hw2_tests/searcheng_tests
+"SearchEng.DisplayPage" start time: Feb 12 07:01 UTC
+Output:
+----------------------------------------------------------
+==4017== Memcheck, a memory error detector
+==4017== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==4017== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
+==4017== Command: /work/hw-nlicea/hw2/hw2_tests/searcheng_tests/searcheng_tests --gtest_filter=SearchEng.DisplayPage
+==4017== 
+Running main() from /build/googletest-j5yxiC/googletest-1.10.0/googletest/src/gtest_main.cc
+Note: Google Test filter = SearchEng.DisplayPage
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from SearchEng
+[ RUN      ] SearchEng.DisplayPage
+==4017== Invalid read of size 8
+==4017==    at 0x130793: SearchEng::~SearchEng() (searcheng.cpp:34)
+==4017==    by 0x125973: std::default_delete<SearchEng>::operator()(SearchEng*) const (unique_ptr.h:81)
+==4017==    by 0x123CC3: std::unique_ptr<SearchEng, std::default_delete<SearchEng> >::~unique_ptr() (unique_ptr.h:292)
+==4017==    by 0x121E89: SearchEng_DisplayPage_Test::TestBody() (searcheng_tests.cpp:351)
+==4017==    by 0x166410: HandleSehExceptionsInMethodIfSupported<testing::Test, void> (gtest.cc:2433)
+==4017==    by 0x166410: void testing::internal::HandleExceptionsInMethodIfSupported<testing::Test, void>(testing::Test*, void (testing::Test::*)(), char const*) (gtest.cc:2469)
+==4017==    by 0x15AAB5: Run (gtest.cc:2508)
+==4017==    by 0x15AAB5: testing::Test::Run() (gtest.cc:2498)
+==4017==    by 0x15AC14: Run (gtest.cc:2684)
+==4017==    by 0x15AC14: testing::TestInfo::Run() (gtest.cc:2657)
+==4017==    by 0x15ACFC: Run (gtest.cc:2816)
+==4017==    by 0x15ACFC: testing::TestSuite::Run() (gtest.cc:2795)
+==4017==    by 0x15B21B: testing::internal::UnitTestImpl::RunAllTests() (gtest.cc:5338)
+==4017==    by 0x166980: HandleSehExceptionsInMethodIfSupported<testing::internal::UnitTestImpl, bool> (gtest.cc:2433)
+==4017==    by 0x166980: bool testing::internal::HandleExceptionsInMethodIfSupported<testing::internal::UnitTestImpl, bool>(testing::internal::UnitTestImpl*, bool (testing::internal::UnitTestImpl::*)(), char const*) (gtest.cc:2469)
+==4017==    by 0x15B44B: testing::UnitTest::Run() (gtest.cc:4925)
+==4017==    by 0x117DC3: main (in /work/hw-nlicea/hw2/hw2_tests/searcheng_tests/searcheng_tests)
+==4017==  Address 0x4ddaf98 is 8 bytes before a block of size 176 alloc'd
+==4017==    at 0x483BE63: operator new(unsigned long) (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==4017==    by 0x130ECE: SearchEng::read_page(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (searcheng.cpp:117)
+==4017==    by 0x121CE2: SearchEng_DisplayPage_Test::TestBody() (searcheng_tests.cpp:354)
+==4017==    by 0x166410: HandleSehExceptionsInMethodIfSupported<testing::Test, void> (gtest.cc:2433)
+==4017==    by 0x166410: void testing::internal::HandleExceptionsInMethodIfSupported<testing::Test, void>(testing::Test*, void (testing::Test::*)(), char const*) (gtest.cc:2469)
+==4017==    by 0x15AAB5: Run (gtest.cc:2508)
+==4017==    by 0x15AAB5: testing::Test::Run() (gtest.cc:2498)
+==4017==    by 0x15AC14: Run (gtest.cc:2684)
+==4017==    by 0x15AC14: testing::TestInfo::Run() (gtest.cc:2657)
+==4017==    by 0x15ACFC: Run (gtest.cc:2816)
+==4017==    by 0x15ACFC: testing::TestSuite::Run() (gtest.cc:2795)
+==4017==    by 0x15B21B: testing::internal::UnitTestImpl::RunAllTests() (gtest.cc:5338)
+==4017==    by 0x166980: HandleSehExceptionsInMethodIfSupported<testing::internal::UnitTestImpl, bool> (gtest.cc:2433)
+==4017==    by 0x166980: bool testing::internal::HandleExceptionsInMethodIfSupported<testing::internal::UnitTestImpl, bool>(testing::internal::UnitTestImpl*, bool (testing::internal::UnitTestImpl::*)(), char const*) (gtest.cc:2469)
+==4017==    by 0x15B44B: testing::UnitTest::Run() (gtest.cc:4925)
+==4017==    by 0x117DC3: main (in /work/hw-nlicea/hw2/hw2_tests/searcheng_tests/searcheng_tests)
+==4017== 
+==4017== Invalid free() / delete / delete[] / realloc()
+==4017==    at 0x483D74F: operator delete[](void*) (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==4017==    by 0x1307CF: SearchEng::~SearchEng() (searcheng.cpp:34)
+==4017==    by 0x125973: std::default_delete<SearchEng>::operator()(SearchEng*) const (unique_ptr.h:81)
+==4017==    by 0x123CC3: std::unique_ptr<SearchEng, std::default_delete<SearchEng> >::~unique_ptr() (unique_ptr.h:292)
+==4017==    by 0x121E89: SearchEng_DisplayPage_Test::TestBody() (searcheng_tests.cpp:351)
+==4017==    by 0x166410: HandleSehExceptionsInMethodIfSupported<testing::Test, void> (gtest.cc:2433)
+==4017==    by 0x166410: void testing::internal::HandleExceptionsInMethodIfSupported<testing::Test, void>(testing::Test*, void (testing::Test::*)(), char const*) (gtest.cc:2469)
+==4017==    by 0x15AAB5: Run (gtest.cc:2508)
+==4017==    by 0x15AAB5: testing::Test::Run() (gtest.cc:2498)
+==4017==    by 0x15AC14: Run (gtest.cc:2684)
+==4017==    by 0x15AC14: testing::TestInfo::Run() (gtest.cc:2657)
+==4017==    by 0x15ACFC: Run (gtest.cc:2816)
+==4017==    by 0x15ACFC: testing::TestSuite::Run() (gtest.cc:2795)
+==4017==    by 0x15B21B: testing::internal::UnitTestImpl::RunAllTests() (gtest.cc:5338)
+==4017==    by 0x166980: HandleSehExceptionsInMethodIfSupported<testing::internal::UnitTestImpl, bool> (gtest.cc:2433)
+==4017==    by 0x166980: bool testing::internal::HandleExceptionsInMethodIfSupported<testing::internal::UnitTestImpl, bool>(testing::internal::UnitTestImpl*, bool (testing::internal::UnitTestImpl::*)(), char const*) (gtest.cc:2469)
+==4017==    by 0x15B44B: testing::UnitTest::Run() (gtest.cc:4925)
+==4017==  Address 0x4ddaf98 is 8 bytes before a block of size 176 alloc'd
+==4017==    at 0x483BE63: operator new(unsigned long) (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==4017==    by 0x130ECE: SearchEng::read_page(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (searcheng.cpp:117)
+==4017==    by 0x121CE2: SearchEng_DisplayPage_Test::TestBody() (searcheng_tests.cpp:354)
+==4017==    by 0x166410: HandleSehExceptionsInMethodIfSupported<testing::Test, void> (gtest.cc:2433)
+==4017==    by 0x166410: void testing::internal::HandleExceptionsInMethodIfSupported<testing::Test, void>(testing::Test*, void (testing::Test::*)(), char const*) (gtest.cc:2469)
+==4017==    by 0x15AAB5: Run (gtest.cc:2508)
+==4017==    by 0x15AAB5: testing::Test::Run() (gtest.cc:2498)
+==4017==    by 0x15AC14: Run (gtest.cc:2684)
+==4017==    by 0x15AC14: testing::TestInfo::Run() (gtest.cc:2657)
+==4017==    by 0x15ACFC: Run (gtest.cc:2816)
+==4017==    by 0x15ACFC: testing::TestSuite::Run() (gtest.cc:2795)
+==4017==    by 0x15B21B: testing::internal::UnitTestImpl::RunAllTests() (gtest.cc:5338)
+==4017==    by 0x166980: HandleSehExceptionsInMethodIfSupported<testing::internal::UnitTestImpl, bool> (gtest.cc:2433)
+==4017==    by 0x166980: bool testing::internal::HandleExceptionsInMethodIfSupported<testing::internal::UnitTestImpl, bool>(testing::internal::UnitTestImpl*, bool (testing::internal::UnitTestImpl::*)(), char const*) (gtest.cc:2469)
+==4017==    by 0x15B44B: testing::UnitTest::Run() (gtest.cc:4925)
+==4017==    by 0x117DC3: main (in /work/hw-nlicea/hw2/hw2_tests/searcheng_tests/searcheng_tests)
+==4017== 
+[       OK ] SearchEng.DisplayPage (116 ms)
+[----------] 1 test from SearchEng (120 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (137 ms total)
+[  PASSED  ] 1 test.
+==4017== 
+==4017== HEAP SUMMARY:
+==4017==     in use at exit: 851 bytes in 12 blocks
+==4017==   total heap usage: 299 allocs, 290 frees, 148,344 bytes allocated
+==4017== 
+==4017== 8 bytes in 1 blocks are definitely lost in loss record 1 of 9
+==4017==    at 0x483BE63: operator new(unsigned long) (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==4017==    by 0x118426: searchEngFactory() (searcheng_tests.cpp:41)
+==4017==    by 0x121C20: SearchEng_DisplayPage_Test::TestBody() (searcheng_tests.cpp:351)
+==4017==    by 0x166410: HandleSehExceptionsInMethodIfSupported<testing::Test, void> (gtest.cc:2433)
+==4017==    by 0x166410: void testing::internal::HandleExceptionsInMethodIfSupported<testing::Test, void>(testing::Test*, void (testing::Test::*)(), char const*) (gtest.cc:2469)
+==4017==    by 0x15AAB5: Run (gtest.cc:2508)
+==4017==    by 0x15AAB5: testing::Test::Run() (gtest.cc:2498)
+==4017==    by 0x15AC14: Run (gtest.cc:2684)
+==4017==    by 0x15AC14: testing::TestInfo::Run() (gtest.cc:2657)
+==4017==    by 0x15ACFC: Run (gtest.cc:2816)
+==4017==    by 0x15ACFC: testing::TestSuite::Run() (gtest.cc:2795)
+==4017==    by 0x15B21B: testing::internal::UnitTestImpl::RunAllTests() (gtest.cc:5338)
+==4017==    by 0x166980: HandleSehExceptionsInMethodIfSupported<testing::internal::UnitTestImpl, bool> (gtest.cc:2433)
+==4017==    by 0x166980: bool testing::internal::HandleExceptionsInMethodIfSupported<testing::internal::UnitTestImpl, bool>(testing::internal::UnitTestImpl*, bool (testing::internal::UnitTestImpl::*)(), char const*) (gtest.cc:2469)
+==4017==    by 0x15B44B: testing::UnitTest::Run() (gtest.cc:4925)
+==4017==    by 0x117DC3: main (in /work/hw-nlicea/hw2/hw2_tests/searcheng_tests/searcheng_tests)
+==4017== 
+==4017== 8 bytes in 1 blocks are definitely lost in loss record 2 of 9
+==4017==    at 0x483BE63: operator new(unsigned long) (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==4017==    by 0x118497: searchEngFactory() (searcheng_tests.cpp:42)
+==4017==    by 0x121C20: SearchEng_DisplayPage_Test::TestBody() (searcheng_tests.cpp:351)
+==4017==    by 0x166410: HandleSehExceptionsInMethodIfSupported<testing::Test, void> (gtest.cc:2433)
+==4017==    by 0x166410: void testing::internal::HandleExceptionsInMethodIfSupported<testing::Test, void>(testing::Test*, void (testing::Test::*)(), char const*) (gtest.cc:2469)
+==4017==    by 0x15AAB5: Run (gtest.cc:2508)
+==4017==    by 0x15AAB5: testing::Test::Run() (gtest.cc:2498)
+==4017==    by 0x15AC14: Run (gtest.cc:2684)
+==4017==    by 0x15AC14: testing::TestInfo::Run() (gtest.cc:2657)
+==4017==    by 0x15ACFC: Run (gtest.cc:2816)
+==4017==    by 0x15ACFC: testing::TestSuite::Run() (gtest.cc:2795)
+==4017==    by 0x15B21B: testing::internal::UnitTestImpl::RunAllTests() (gtest.cc:5338)
+==4017==    by 0x166980: HandleSehExceptionsInMethodIfSupported<testing::internal::UnitTestImpl, bool> (gtest.cc:2433)
+==4017==    by 0x166980: bool testing::internal::HandleExceptionsInMethodIfSupported<testing::internal::UnitTestImpl, bool>(testing::internal::UnitTestImpl*, bool (testing::internal::UnitTestImpl::*)(), char const*) (gtest.cc:2469)
+==4017==    by 0x15B44B: testing::UnitTest::Run() (gtest.cc:4925)
+==4017==    by 0x117DC3: main (in /work/hw-nlicea/hw2/hw2_tests/searcheng_tests/searcheng_tests)
+==4017== 
+==4017== 835 (176 direct, 659 indirect) bytes in 1 blocks are definitely lost in loss record 9 of 9
+==4017==    at 0x483BE63: operator new(unsigned long) (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==4017==    by 0x130D48: SearchEng::read_page(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (searcheng.cpp:103)
+==4017==    by 0x121CE2: SearchEng_DisplayPage_Test::TestBody() (searcheng_tests.cpp:354)
+==4017==    by 0x166410: HandleSehExceptionsInMethodIfSupported<testing::Test, void> (gtest.cc:2433)
+==4017==    by 0x166410: void testing::internal::HandleExceptionsInMethodIfSupported<testing::Test, void>(testing::Test*, void (testing::Test::*)(), char const*) (gtest.cc:2469)
+==4017==    by 0x15AAB5: Run (gtest.cc:2508)
+==4017==    by 0x15AAB5: testing::Test::Run() (gtest.cc:2498)
+==4017==    by 0x15AC14: Run (gtest.cc:2684)
+==4017==    by 0x15AC14: testing::TestInfo::Run() (gtest.cc:2657)
+==4017==    by 0x15ACFC: Run (gtest.cc:2816)
+==4017==    by 0x15ACFC: testing::TestSuite::Run() (gtest.cc:2795)
+==4017==    by 0x15B21B: testing::internal::UnitTestImpl::RunAllTests() (gtest.cc:5338)
+==4017==    by 0x166980: HandleSehExceptionsInMethodIfSupported<testing::internal::UnitTestImpl, bool> (gtest.cc:2433)
+==4017==    by 0x166980: bool testing::internal::HandleExceptionsInMethodIfSupported<testing::internal::UnitTestImpl, bool>(testing::internal::UnitTestImpl*, bool (testing::internal::UnitTestImpl::*)(), char const*) (gtest.cc:2469)
+==4017==    by 0x15B44B: testing::UnitTest::Run() (gtest.cc:4925)
+==4017==    by 0x117DC3: main (in /work/hw-nlicea/hw2/hw2_tests/searcheng_tests/searcheng_tests)
+==4017== 
+==4017== LEAK SUMMARY:
+==4017==    definitely lost: 192 bytes in 3 blocks
+==4017==    indirectly lost: 659 bytes in 9 blocks
+==4017==      possibly lost: 0 bytes in 0 blocks
+==4017==    still reachable: 0 bytes in 0 blocks
+==4017==         suppressed: 0 bytes in 0 blocks
+==4017== 
+==4017== For lists of detected and suppressed errors, rerun with: -s
+==4017== ERROR SUMMARY: 9 errors from 5 contexts (suppressed: 0 from 0)
+<end of output>
+Test time =   0.92 sec
+----------------------------------------------------------
+Test Passed.
+"SearchEng.DisplayPage" end time: Feb 12 07:01 UTC
+"SearchEng.DisplayPage" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: Feb 12 07:01 UTC

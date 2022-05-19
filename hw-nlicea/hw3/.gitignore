@@ -1,0 +1,6 @@
+llrec.o
+llrec-test
+llrec-test.o
+hw3_heap_checker/
+hw3_stu_tests/
+stack_test.cpp

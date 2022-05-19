@@ -1,0 +1,9 @@
+1:LabelList.Nominal
+8:Label.Label1
+9:Label.Label2
+11:Find.FindViaMessage
+12:Find.FindViaIndex
+14:Unlabel.Unlabel1
+15:Unlabel.UnlabelRemove
+16:Label.AddRemoveAfterLabel
+17:MsgToken.ComparisonBool
