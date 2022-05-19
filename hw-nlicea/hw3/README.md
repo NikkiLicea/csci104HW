@@ -1,4 +1,7 @@
-Nikki Licea - nlicea@usc.edu
+Homework 3: Heaps
 
-To run please use make and ctest
-I was unable to complete Solver so I do not expect these tests to pass.
+Problem 1 - Heap Tracing: q1.pdf
+
+Problem 2 - A* Algorithm Tracing: q2.txt
+
+Covers topics in heaps and backtracking

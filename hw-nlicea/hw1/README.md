@@ -1,1 +1,10 @@
-I have had difficulty running my tests. Initially I had 83% of the tests passed but after my laptop shut down this amount went down to 61%. I don't believe it was because my code was unsaved as it looks relatively the same and when I run gdb it actually moves up my code going from line 198 to 197 in the label_tests.cpp. This was not the case beforehand so I am confused.
+HW 1: Linked Lists and Recursion
+
+Problem 1 - Course Policies: hw1.txt
+
+Problem 2 - Git: hw1.txt
+
+Problem 3 - Runtime Analysis: q3_answers.pdf
+
+Problem 4 - Linked List Recursion Tracing: q3.pdf
+
