@@ -1,0 +1,7 @@
+The line number where the error was.
+A short explanation of the nature of the error (one or two sentences).
+A short explanation of what you did to fix the error.
+
+Line 249
+Incorrect indicies for the invaders array
+I changed the second index from invaderRow to invaderCol
